@@ -1,0 +1,11 @@
+# CQ34 (cross-module)
+# Which threat actor is attributable to a given indicator of compromise?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?ioc ?actor WHERE {
+  ?ioc attack:is_attributable_to ?actor .
+}

@@ -1,0 +1,13 @@
+# CQ14 (module C)
+# Which products (and their CPE identifiers) are affected by a given vulnerability?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?product ?cpeid WHERE {
+  attack:CVE_2023_20269 attack:affects ?product .
+  OPTIONAL { ?product attack:is_identified_by ?cpe .
+             ?cpe attack:has_cpe_identifier ?cpeid . }
+}

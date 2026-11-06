@@ -1,0 +1,12 @@
+# CQ36 (cross-module)
+# Which organizational role is assigned to a targeted asset, and what human factors are associated with that role?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?asset ?role ?hf WHERE {
+  ?asset attack:has_assigned_role ?role .
+  OPTIONAL { ?hf attack:has_organizational_role ?role . }
+}

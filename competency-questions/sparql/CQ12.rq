@@ -1,0 +1,16 @@
+# CQ12 (module C)
+# What is the severity level and CVSS/EPSS score history of a given vulnerability over time?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?cveid ?severity ?cvss ?epss ?date WHERE {
+  ?cve attack:has_cve_identifier ?cveid ;
+       attack:has_risk_assessment ?ra .
+  OPTIONAL { ?ra attack:has_severity ?severity }
+  OPTIONAL { ?ra attack:has_cvss_base_score ?cvss }
+  OPTIONAL { ?ra attack:has_epss_score ?epss }
+  OPTIONAL { ?ra attack:has_assessment_date ?date }
+}

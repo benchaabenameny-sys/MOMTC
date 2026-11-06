@@ -1,0 +1,13 @@
+# CQ38 (cross-module)
+# Which targeted asset was ultimately impacted by a given threat actor's campaign?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?asset WHERE {
+  attack:Akira attack:orchestrates ?campaign .
+  ?campaign attack:causes_impact ?impact .
+  ?impact attack:impacts_asset ?asset .
+}

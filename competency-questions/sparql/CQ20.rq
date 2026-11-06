@@ -1,0 +1,16 @@
+# CQ20 (module D)
+# What is the execution risk score of a given technique, and how does it differ from its associated vulnerability's risk assessment?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?technique ?trisk ?cveid ?cvss WHERE {
+  ?technique attack:has_execution_risk_score ?trisk .
+  OPTIONAL { ?technique attack:exploits_weakness ?cwe .
+             ?cve attack:exhibits_weakness ?cwe ;
+                  attack:has_cve_identifier ?cveid ;
+                  attack:has_risk_assessment ?ra .
+             ?ra attack:has_cvss_base_score ?cvss . }
+}

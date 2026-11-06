@@ -1,0 +1,11 @@
+# CQ24 (module E)
+# Which NIST SP 800-53 control formalizes a given D3FEND countermeasure?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?cm ?control WHERE {
+  ?cm attack:is_formalized_by ?control .
+}

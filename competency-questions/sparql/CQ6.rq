@@ -1,0 +1,12 @@
+# CQ6 (module B)
+# Which sub-techniques belong to a given ATT&CK technique?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?sub ?subid WHERE {
+  ?sub attack:is_part_of_technique attack:T1566_Phishing .
+  OPTIONAL { ?sub attack:has_sub_technique_id ?subid . }
+}

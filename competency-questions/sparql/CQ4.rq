@@ -1,0 +1,12 @@
+# CQ4 (module A)
+# Which infrastructure does a given threat actor control, and which attack vectors does that infrastructure support?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?infra ?vector WHERE {
+  attack:Akira attack:controls_infrastructure ?infra .
+  OPTIONAL { ?infra attack:supports_attack_vector ?vector . }
+}

@@ -1,0 +1,12 @@
+# CQ8 (module B)
+# Which techniques realize a given CAPEC attack pattern?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?technique ?capecid WHERE {
+  ?technique attack:realizes_attack_pattern ?pattern .
+  OPTIONAL { ?pattern attack:has_capec_identifier ?capecid . }
+}

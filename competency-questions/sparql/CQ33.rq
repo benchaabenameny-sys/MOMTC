@@ -1,0 +1,12 @@
+# CQ33 (cross-module)
+# Which human factors are exploited by a given attack vector, and which countermeasures address them?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?vector ?hf ?cm WHERE {
+  ?vector attack:exploits_human_factor ?hf .
+  OPTIONAL { ?cm attack:addresses_human_factor ?hf . }
+}

@@ -1,0 +1,13 @@
+# CQ23 (module E)
+# What is the implementation status and effectiveness score of a given countermeasure?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?cm ?status ?score WHERE {
+  ?cm rdf:type attack:D3FEND_Countermeasure .
+  OPTIONAL { ?cm attack:has_implementation_status ?status }
+  OPTIONAL { ?cm attack:has_effectiveness_score   ?score }
+}

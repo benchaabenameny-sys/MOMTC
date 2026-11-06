@@ -1,0 +1,13 @@
+# CQ31 (cross-module)
+# Which weaknesses are exploited by the techniques employed in a given threat actor's campaign?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?technique ?cwe WHERE {
+  attack:Akira attack:orchestrates ?campaign .
+  ?campaign attack:campaign_employs ?technique .
+  ?technique attack:exploits_weakness ?cwe .
+}

@@ -1,0 +1,12 @@
+# CQ17 (module D)
+# What impact type(s) (Confidentiality, Integrity, Availability) resulted from a given attack execution?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?impact ?type WHERE {
+  attack:Akira_Execution_Window attack:results_in ?impact .
+  ?impact attack:has_impact_type ?type .
+}

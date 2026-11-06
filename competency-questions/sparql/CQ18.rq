@@ -1,0 +1,11 @@
+# CQ18 (module D)
+# Which assets share a critical operational dependency with a given targeted asset?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?other WHERE {
+  attack:VPN_Gateway_Asset attack:shares_critical_dependency_with ?other .
+}

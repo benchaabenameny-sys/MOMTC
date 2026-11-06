@@ -1,0 +1,13 @@
+# CQ29 (module F)
+# What is the insider risk score of a given insider threat, and which technique does it realize?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?insider ?score ?technique WHERE {
+  ?insider rdf:type attack:Insider_Threat .
+  OPTIONAL { ?insider attack:has_insider_risk_score ?score }
+  OPTIONAL { ?insider attack:is_realized_via ?technique }
+}

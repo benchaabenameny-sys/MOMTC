@@ -1,0 +1,12 @@
+# CQ7 (module B)
+# Which attack vectors does a given technique utilize, and what category do they belong to?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?technique ?vector ?category WHERE {
+  ?technique attack:utilizes_attack_vector ?vector .
+  OPTIONAL { ?vector attack:has_vector_category ?category . }
+}

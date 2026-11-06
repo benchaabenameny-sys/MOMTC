@@ -1,0 +1,12 @@
+# CQ11 (module C)
+# Which weaknesses (CWE) does a given vulnerability (CVE) exhibit, including transitively inherited ancestor weaknesses?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?cwe ?cweid WHERE {
+  attack:CVE_2020_3259 attack:transitively_exhibits ?cwe .
+  OPTIONAL { ?cwe attack:has_cwe_identifier ?cweid . }
+}

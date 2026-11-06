@@ -1,0 +1,11 @@
+# CQ26 (module F)
+# What is the intent (Malicious, Accidental, Negligent, Unknown) associated with a given human factor?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?hf ?intent WHERE {
+  ?hf attack:has_intent ?intent .
+}

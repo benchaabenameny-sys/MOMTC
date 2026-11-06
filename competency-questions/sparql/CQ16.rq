@@ -1,0 +1,13 @@
+# CQ16 (module D)
+# Which technique was executed during a given temporal execution window?
+
+PREFIX attack: <https://attack.mitre.org/>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?technique ?start ?end WHERE {
+  attack:Akira_Execution_Window attack:executes_technique ?technique ;
+                                attack:has_start_time ?start ;
+                                attack:has_end_time   ?end .
+}
