@@ -1,0 +1,111 @@
+individual,class,source
+Akira,attack:Threat_Actor_Profiling,AA24-109A
+Akira_Megazord_Affiliate,attack:Threat_Actor_Profiling,"AA24-109A : Megazord variant, same modus operandi"
+Akira_Campaign_2023_2025,attack:Threat_Campaign,AA24-109A
+Advanced,attack:Sophistication_Level,Modelling decision
+Financial_Gain,attack:Motivation,"AA24-109A : USD 42M, double extortion"
+Active,attack:Threat_Life_cycle_Status,AA24-109A 2025 update
+Mature,attack:Threat_Maturity,Modelling decision
+Ransomware,attack:Threat_Category,AA24-109A
+Double_Extortion_Behavior,attack:Threat_Behavior,AA24-109A : exfiltration then encryption
+Akira_Encryptor,attack:Threat_Capability,"AA24-109A : w.exe, Win.exe"
+Megazord,attack:Threat_Capability,AA24-109A : Rust variant
+Rclone,attack:Threat_Capability,AA24-109A : Rclone.exe exfiltration
+AnyDesk,attack:Threat_Capability,AA24-109A : remote access
+Akira_Tor_Leak_Site,attack:Infrastructure,AA24-109A : Tor leak site
+Akira_C2_Infrastructure,attack:Infrastructure,"AA24-109A : Ngrok, proxies"
+T1190_Exploit_Public_Facing_Application,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1078_Valid_Accounts,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1133_External_Remote_Services,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1566_Phishing,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1003_OS_Credential_Dumping,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1562_Impair_Defenses,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1486_Data_Encrypted_For_Impact,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1490_Inhibit_System_Recovery,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1657_Financial_Theft,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1567_Exfiltration_Over_Web_Service,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1136_Create_Account,<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>,AA24-109A
+T1566_001_Spearphishing_Attachment,<https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>,AA24-109A
+T1566_002_Spearphishing_Link,<https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>,AA24-109A
+T1003_001_LSASS_Memory,<https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>,AA24-109A
+T1562_001_Disable_Or_Modify_Tools,<https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>,AA24-109A
+T1567_002_Exfiltration_To_Cloud_Storage,<https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>,AA24-109A
+T1136_002_Domain_Account,<https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>,AA24-109A
+TA0001_Initial_Access,<https://attack.mitre.org/MITRE_ATT&CK:Tactics>,MITRE ATT&CK
+TA0006_Credential_Access,<https://attack.mitre.org/MITRE_ATT&CK:Tactics>,MITRE ATT&CK
+TA0003_Persistence,<https://attack.mitre.org/MITRE_ATT&CK:Tactics>,MITRE ATT&CK
+TA0005_Defense_Evasion,<https://attack.mitre.org/MITRE_ATT&CK:Tactics>,MITRE ATT&CK
+TA0010_Exfiltration,<https://attack.mitre.org/MITRE_ATT&CK:Tactics>,MITRE ATT&CK
+TA0040_Impact,<https://attack.mitre.org/MITRE_ATT&CK:Tactics>,MITRE ATT&CK
+VPN_Exploitation_Vector,attack:Attack_Vector,AA24-109A : VPN without MFA
+Spearphishing_Vector,attack:Attack_Vector,AA24-109A
+RDP_Access_Vector,attack:Attack_Vector,AA24-109A
+Network_Based,attack:Attack_Vector_Type,Modelling decision
+Social_Engineering,attack:Attack_Vector_Type,Modelling decision
+CAPEC_163_Spear_Phishing,attack:CAPEC:Attack_Pattern,CAPEC-163
+Windows,attack:Platform,AA24-109A
+Linux,attack:Platform,AA24-109A
+VMware_ESXi,attack:Platform,AA24-109A : ESXi variant
+CVE_2020_3259,attack:CVE_Vulnerabilities,AA24-109A / NVD
+CVE_2023_20269,attack:CVE_Vulnerabilities,AA24-109A / NVD
+CWE_200_Exposure_Of_Sensitive_Information,attack:CWE_Weakness,NVD/Cisco PSIRT (secondary) -> CVE-2020-3259
+CWE_863_Incorrect_Authorization,attack:CWE_Weakness,NVD (primary) -> CVE-2023-20269
+CWE_668_Exposure_To_Wrong_Sphere,attack:CWE_Weakness,Parent of CWE-200 (MITRE CWE)
+CWE_285_Improper_Authorization,attack:CWE_Weakness,Parent of CWE-863 (MITRE CWE)
+CWE_288_Authentication_Bypass_Alternate_Path,attack:CWE_Weakness,NVD/Cisco PSIRT (secondary) -> CVE-2023-20269
+Cisco_ASA,attack:CVE_Products,AA24-109A
+Cisco_FTD,attack:CVE_Products,AA24-109A
+CPE_Cisco_ASA_Software,attack:CPE_Platform,"NVD CPE, verified"
+CPE_Cisco_FTD_Software,attack:CPE_Platform,"NVD CPE, verified"
+RA_CVE_2020_3259,attack:Risk_Assessment,NVD CVSS v3.1 + EPSS FIRST 2026-10-12
+RA_CVE_2023_20269,attack:Risk_Assessment,NVD CVSS v3.1 + EPSS FIRST 2026-10-12
+High,attack:Severity_Level,NVD
+Critical,attack:Severity_Level,NVD
+IoC_Akira_File_Extension,attack:Indicators_Of_Compromise,AA24-109A : .akira
+IoC_Ransom_Note_fn_txt,attack:Indicators_Of_Compromise,AA24-109A : fn.txt
+IoC_Account_itadm,attack:Indicators_Of_Compromise,AA24-109A : persistence account
+IoC_Megazord_Hash,attack:Indicators_Of_Compromise,AA24-109A table 2 : SHA-256 Megazord
+IoC_Akira_Encryptor_Hash,attack:Indicators_Of_Compromise,AA24-109A table 2 : SHA-256 w.exe
+Akira_Execution_Window,attack:Temporal_Execution,AA24-109A
+Akira_Impact_2024,attack:Threat_Impact,AA24-109A : 250+ organisations
+Confidentiality,attack:Impact_Type,AA24-109A : exfiltration
+Integrity,attack:Impact_Type,AA24-109A : encryption
+Availability,attack:Impact_Type,AA24-109A : unavailability
+VPN_Gateway_Asset,attack:Targeted_Asset,AA24-109A
+Domain_Controller_Asset,attack:Targeted_Asset,AA24-109A : compromised AD
+ESXi_Host_Asset,attack:Targeted_Asset,AA24-109A
+Backup_Server_Asset,attack:Targeted_Asset,AA24-109A : shadow copies
+Criticality_Critical,attack:Asset_Criticality_Level,Modelling decision
+Criticality_High,attack:Asset_Criticality_Level,Modelling decision
+D3_MFA_Multi_Factor_Authentication,attack:D3FEND_Countermeasure,D3FEND D3-MFA (Harden/Agent Authentication)
+D3_NTA_Network_Traffic_Analysis,attack:D3FEND_Countermeasure,D3FEND D3-NTA (Detect)
+D3_RO_Restore_Object,attack:D3FEND_Countermeasure,D3FEND D3-RO (Restore) ; AA24-109A backups
+D3_NI_Network_Isolation,attack:D3FEND_Countermeasure,D3FEND D3-NI (Isolate) ; AA24-109A
+D3_CH_Credential_Hardening,attack:D3FEND_Countermeasure,D3FEND D3-CH (Harden)
+D3_OTP_One_Time_Password,attack:D3FEND_Sub_Countermeasure,"D3FEND D3-OTP, sub-technique of D3-CH"
+Detect_Tactic,attack:D3FEND_Defensive_Tactics,D3FEND tactic Detect
+Isolate_Tactic,attack:D3FEND_Defensive_Tactics,D3FEND tactic Isolate
+Restore_Tactic,attack:D3FEND_Defensive_Tactics,D3FEND tactic Restore
+Harden_Tactic,attack:D3FEND_Defensive_Tactics,D3FEND tactic Harden
+DM_EDR_Behavioral_Detection,attack:Detection_Mechanism,AA24-109A : EDR
+DM_Account_Anomaly_Monitoring,attack:Detection_Mechanism,AA24-109A : AD accounts
+Artifact_User_Account,attack:D3FEND_Digital_Artifact,D3FEND
+Artifact_Network_Traffic,attack:D3FEND_Digital_Artifact,D3FEND
+Artifact_File,attack:D3FEND_Digital_Artifact,D3FEND
+NIST_IA_2_Identification_And_Authentication,attack:Security_Control,NIST SP 800-53 Rev.5
+NIST_SI_2_Flaw_Remediation,attack:Security_Control,NIST SP 800-53 Rev.5
+NIST_CP_9_System_Backup,attack:Security_Control,NIST SP 800-53 Rev.5
+NIST_SC_7_Boundary_Protection,attack:Security_Control,NIST SP 800-53 Rev.5
+Status_Implemented,attack:Mitigation_Status,Modelling decision
+Status_Not_Implemented,attack:Mitigation_Status,Modelling decision
+HF_VPN_User_Without_MFA,attack:Human_Factor,AA24-109A : VPN without MFA
+HF_Phishing_Victim,attack:Human_Factor,AA24-109A : spearphishing
+Intent_Negligent,attack:Intent,AA24-109A : MFA not enabled
+Intent_Accidental,attack:Intent,AA24-109A : link clicked
+Role_Remote_Worker,attack:Organizational_Role,AA24-109A
+Role_System_Admin,attack:Organizational_Role,AA24-109A : admin accounts
+Error_MFA_Not_Enabled,attack:Human_Error_Type,AA24-109A
+Error_Phishing_Susceptibility,attack:Human_Error_Type,AA24-109A
+Awareness_Low,attack:Security_Awareness_Level,Modelling decision
+Awareness_Medium,attack:Security_Awareness_Level,Modelling decision
+IT_Compromised_Admin_Account,attack:Insider_Threat,AA24-109A : itadm account
