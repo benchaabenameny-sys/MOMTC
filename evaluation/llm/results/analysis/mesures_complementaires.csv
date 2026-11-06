@@ -1,0 +1,13 @@
+mesure,valeur
+fleiss_kappa_entre_modeles,0.4501
+n_items_fleiss,153
+ECE::deepseek/deepseek-chat,0.1407
+calibration::deepseek/deepseek-chat::medium,n=55 accuracy=0.127 confiance_supposee=0.6
+calibration::deepseek/deepseek-chat::high,n=404 accuracy=0.804 confiance_supposee=0.9
+ECE::meta-llama/llama-3.3-70b-instruct,0.0914
+calibration::meta-llama/llama-3.3-70b-instruct::high,n=373 accuracy=0.812 confiance_supposee=0.9
+calibration::meta-llama/llama-3.3-70b-instruct::medium,n=85 accuracy=0.494 confiance_supposee=0.6
+calibration::meta-llama/llama-3.3-70b-instruct::low,n=1 accuracy=0.000 confiance_supposee=0.25
+ECE::qwen/qwen-2.5-72b-instruct,0.1362
+calibration::qwen/qwen-2.5-72b-instruct::high,n=457 accuracy=0.764 confiance_supposee=0.9
+calibration::qwen/qwen-2.5-72b-instruct::medium,n=2 accuracy=0.500 confiance_supposee=0.6

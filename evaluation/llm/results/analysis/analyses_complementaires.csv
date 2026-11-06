@@ -1,0 +1,11 @@
+analyse,groupe,k_ou_appels,n_ou_detail
+routage,reponses hors hebergeur epingle,0,1593
+sensibilite,deepseek/deepseek-chat | paraphrase,1,12
+sensibilite,deepseek/deepseek-chat | reordre,0,12
+sensibilite,meta-llama/llama-3.3-70b-instruct | paraphrase,1,12
+sensibilite,meta-llama/llama-3.3-70b-instruct | reordre,1,12
+sensibilite,qwen/qwen-2.5-72b-instruct | paraphrase,0,12
+sensibilite,qwen/qwen-2.5-72b-instruct | reordre,0,12
+cout,deepseek/deepseek-chat,531,1055406|67712|0.3980|4470
+cout,meta-llama/llama-3.3-70b-instruct,531,986883|70144|0.1211|5750
+cout,qwen/qwen-2.5-72b-instruct,531,989739|49169|0.3760|4447
