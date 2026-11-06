@@ -1,0 +1,18 @@
+{
+ "validator": "stix2-validator 3.3.1",
+ "library": "stix2 3.0.2",
+ "schemas": "oasis-open/cti-stix2-json-schemas 9af1db4",
+ "default": {
+  "valid": true,
+  "errors": 0,
+  "warnings": 0,
+  "details": []
+ },
+ "strict": {
+  "valid": true,
+  "errors": 0,
+  "warnings": 0,
+  "details": []
+ },
+ "stix2_parse": "ok, 75 objects, no custom content"
+}

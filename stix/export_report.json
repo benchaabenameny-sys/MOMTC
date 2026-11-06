@@ -1,0 +1,41 @@
+{
+ "source": "serialisations/MOMTC.rdf",
+ "individuals_in_ontology": 120,
+ "sdo_exported": 39,
+ "sdo_by_type": {
+  "threat-actor": 2,
+  "campaign": 1,
+  "malware": 2,
+  "tool": 2,
+  "infrastructure": 2,
+  "attack-pattern": 17,
+  "vulnerability": 2,
+  "course-of-action": 6,
+  "indicator": 5
+ },
+ "relationships_exported": 36,
+ "relationships_by_property": {
+  "orchestrates -> attributed-to": 1,
+  "campaign_employs -> uses": 3,
+  "employs_capability -> uses": 5,
+  "controls_infrastructure -> uses": 2,
+  "is_implemented_via -> uses": 2,
+  "is_attributable_to -> indicates": 3,
+  "generates_indicator -> indicates": 4,
+  "mitigates -> mitigates": 6,
+  "is_remediated_by -> remediates": 2,
+  "is_behaviorally_similar_to -> related-to": 1,
+  "is_part_of_technique -> related-to": 6,
+  "has_sub_countermeasure -> related-to": 1
+ },
+ "not_exported": {
+  "generates_indicator: indicator -> vulnerability is not a suggested STIX 2.1 relationship": 1
+ },
+ "patterns_normalised": [
+  {
+   "individual": "IoC_Akira_File_Extension",
+   "original": "[file:name MATCHES \".*\\\\.akira$\"]",
+   "exported": "[file:name MATCHES '.*\\\\.akira$']"
+  }
+ ]
+}

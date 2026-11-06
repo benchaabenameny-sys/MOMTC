@@ -1,0 +1,952 @@
+{
+  "type": "bundle",
+  "id": "bundle--850c7e04-c676-463a-b88b-1ab5057ed7f1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--4e714a64-6077-46a7-a387-8efd726d5264",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Create Account",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1136"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3503b7ea-58c9-40f3-978d-99858d818a55",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Data Encrypted For Impact",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1486"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--10eb489f-8d49-4cdb-aab8-5a005c24fd3e",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Disable Or Modify Tools",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--de865035-3b91-45ec-8138-facf7c541e8a",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Domain Account",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1136.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--9c87bcd5-815e-4bfd-826b-7aee4c98a7c0",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Exfiltration Over Web Service",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1567"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--0f58c80a-daa1-4161-b752-351d009de76a",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Exfiltration To Cloud Storage",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1567.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8df481c6-ae37-4fc7-930a-af9d1c5826a4",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Exploit Public Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "cwe",
+          "external_id": "CWE-863"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--6a1dbc38-f7bc-4703-b1b3-eae4829fa01c",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "External Remote Services",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1133"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--65f2a1bd-dac9-47ab-a9ee-b919bf65ade1",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Financial Theft",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--eaeb9051-7c31-42c9-871f-7261288027ef",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Impair Defenses",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--93a6b29f-57dc-462a-a348-59cdd042c001",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Inhibit System Recovery",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1490"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--5b589c21-c3d1-488b-a190-8ead3a1b0c68",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "LSASS Memory",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1003.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--d6470119-71a4-4bf0-9ecf-0ae69dbdc0ba",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "OS Credential Dumping",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ab11c239-d6ed-4905-92ef-3519d141355d",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Phishing",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566"
+        },
+        {
+          "source_name": "capec",
+          "external_id": "CAPEC-163"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--84f81726-26c8-45f0-8220-8c5e97f54a1b",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Spearphishing Attachment",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--91b19523-0d50-472b-a222-3e7a0f602d82",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Spearphishing Link",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--6ca9e7b2-59a7-40d8-a57e-66b049bca859",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Valid Accounts",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        },
+        {
+          "source_name": "cwe",
+          "external_id": "CWE-200"
+        }
+      ]
+    },
+    {
+      "type": "campaign",
+      "spec_version": "2.1",
+      "id": "campaign--ee8211ca-3220-416f-9174-30715c1a358c",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Akira Campaign 2023 2025"
+    },
+    {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "id": "course-of-action--db25fd02-1f73-4d34-bc87-c56e6bf261d8",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Credential Hardening",
+      "external_references": [
+        {
+          "source_name": "d3fend",
+          "external_id": "D3-CH"
+        }
+      ]
+    },
+    {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "id": "course-of-action--084a6b30-ea7c-419c-a3ef-d0d476f2bead",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Multi Factor Authentication",
+      "external_references": [
+        {
+          "source_name": "d3fend",
+          "external_id": "D3-MFA"
+        },
+        {
+          "source_name": "NIST SP 800-53 Rev. 5",
+          "external_id": "IA-2"
+        }
+      ]
+    },
+    {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "id": "course-of-action--7a21de61-69da-4e2d-8aee-d99b780bcbb8",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Network Isolation",
+      "external_references": [
+        {
+          "source_name": "d3fend",
+          "external_id": "D3-NI"
+        },
+        {
+          "source_name": "NIST SP 800-53 Rev. 5",
+          "external_id": "SC-7"
+        }
+      ]
+    },
+    {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "id": "course-of-action--3130ed84-47b9-4488-ad9d-72d6003759e3",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Network Traffic Analysis",
+      "external_references": [
+        {
+          "source_name": "d3fend",
+          "external_id": "D3-NTA"
+        }
+      ]
+    },
+    {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "id": "course-of-action--ff6cbb22-661e-4792-869c-3fbf6d25e1e1",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "One Time Password",
+      "external_references": [
+        {
+          "source_name": "d3fend",
+          "external_id": "D3-OTP"
+        }
+      ]
+    },
+    {
+      "type": "course-of-action",
+      "spec_version": "2.1",
+      "id": "course-of-action--be36e156-5009-4c15-b714-e1feb793911f",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Restore Object",
+      "external_references": [
+        {
+          "source_name": "d3fend",
+          "external_id": "D3-RO"
+        },
+        {
+          "source_name": "NIST SP 800-53 Rev. 5",
+          "external_id": "CP-9"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--aa120299-3a8c-4b71-a4d6-efe129af0704",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Account itadm",
+      "description": "Indicator of compromise of the Akira ransomware reported in joint advisory AA24-109A.",
+      "pattern": "[user-account:account_login = 'itadm']",
+      "pattern_type": "stix",
+      "valid_from": "2024-04-18T00:00:00Z",
+      "confidence": 95
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f0ae97ca-1742-41f7-9352-efa052581230",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Akira Encryptor Hash",
+      "description": "Indicator of compromise of the Akira ransomware reported in joint advisory AA24-109A.",
+      "pattern": "[file:hashes.'SHA-256' = 'd2fd0654710c27dcf37b6c1437880020824e161dd0bf28e3a133ed777242a0ca']",
+      "pattern_type": "stix",
+      "valid_from": "2024-04-18T00:00:00Z",
+      "confidence": 100
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--09ae109d-dc3b-4861-8cf8-fdf91f2d7069",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Akira File Extension",
+      "description": "Indicator of compromise of the Akira ransomware reported in joint advisory AA24-109A.",
+      "pattern": "[file:name MATCHES '.*\\\\.akira$']",
+      "pattern_type": "stix",
+      "valid_from": "2024-04-18T00:00:00Z"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4c30783b-0ca3-4f64-804e-006dbd99c6d2",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Megazord Hash",
+      "description": "Indicator of compromise of the Akira ransomware reported in joint advisory AA24-109A.",
+      "pattern": "[file:hashes.'SHA-256' = 'ffd9f58e5fe8502249c67cad0123ceeeaa6e9f69b4ec9f9e21511809849eb8fc']",
+      "pattern_type": "stix",
+      "valid_from": "2024-04-18T00:00:00Z",
+      "confidence": 100
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7bd2da02-1fa6-4c01-93b8-aaa8fc0f1e75",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Ransom Note fn txt",
+      "description": "Indicator of compromise of the Akira ransomware reported in joint advisory AA24-109A.",
+      "pattern": "[file:name = 'fn.txt']",
+      "pattern_type": "stix",
+      "valid_from": "2024-04-18T00:00:00Z"
+    },
+    {
+      "type": "infrastructure",
+      "spec_version": "2.1",
+      "id": "infrastructure--76947941-0e57-4377-8d68-14249fc628d9",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Akira C2 Infrastructure",
+      "infrastructure_types": [
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "spec_version": "2.1",
+      "id": "infrastructure--ab7ec9b6-7c43-4f83-891f-7c03e5cdb3bf",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Akira Tor Leak Site"
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--7398493a-a574-4f83-a17a-11ae56362a78",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Akira Encryptor",
+      "is_family": true,
+      "malware_types": [
+        "ransomware"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--2c54726f-6bb5-4263-bdb4-b4d85bb9a26a",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Megazord",
+      "is_family": true,
+      "malware_types": [
+        "ransomware"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Akira",
+      "first_seen": "2023-03-01T00:00:00Z",
+      "last_seen": "2025-12-01T00:00:00Z",
+      "sophistication": "advanced"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--4cf6e63e-a0d1-44d6-be04-8d80a5a6c773",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Akira Megazord Affiliate"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--3402e495-3fed-4fa0-9261-a32673c2f222",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "AnyDesk",
+      "tool_types": [
+        "remote-access"
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--f4933cdb-8854-4b08-985a-608681dac68a",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "Rclone"
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--66935d6e-a471-4b5a-bf30-442dc38aa53b",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "CVE-2020-3259",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2020-3259"
+        },
+        {
+          "source_name": "cwe",
+          "external_id": "CWE-200"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--afc07c1f-ae5d-45a8-a3b5-f5c00b08e1b0",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "name": "CVE-2023-20269",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2023-20269"
+        },
+        {
+          "source_name": "cwe",
+          "external_id": "CWE-288"
+        },
+        {
+          "source_name": "cwe",
+          "external_id": "CWE-863"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--041e92ff-ef64-4212-826a-29a5ef6ceabc",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "remediates",
+      "source_ref": "course-of-action--7a21de61-69da-4e2d-8aee-d99b780bcbb8",
+      "target_ref": "vulnerability--66935d6e-a471-4b5a-bf30-442dc38aa53b",
+      "description": "Exported from MOMTC property is_remediated_by"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--06a56094-eec7-442f-b28c-b68cee6129b2",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--84f81726-26c8-45f0-8220-8c5e97f54a1b",
+      "target_ref": "attack-pattern--ab11c239-d6ed-4905-92ef-3519d141355d",
+      "description": "Exported from MOMTC property is_part_of_technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--09e0bb8b-a588-4367-9525-1dd6d0701c03",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--91b19523-0d50-472b-a222-3e7a0f602d82",
+      "target_ref": "attack-pattern--ab11c239-d6ed-4905-92ef-3519d141355d",
+      "description": "Exported from MOMTC property is_part_of_technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--10ef43b1-9941-4f21-9585-69a1aa980dcc",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--3503b7ea-58c9-40f3-978d-99858d818a55",
+      "target_ref": "malware--7398493a-a574-4f83-a17a-11ae56362a78",
+      "description": "Exported from MOMTC property is_implemented_via"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--11a82f94-4e3e-4561-b977-2bf028ee91d5",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--7a21de61-69da-4e2d-8aee-d99b780bcbb8",
+      "target_ref": "attack-pattern--8df481c6-ae37-4fc7-930a-af9d1c5826a4",
+      "description": "Exported from MOMTC property mitigates"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1d2825de-6eb3-4fa3-b523-89d744df12c3",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--be36e156-5009-4c15-b714-e1feb793911f",
+      "target_ref": "attack-pattern--93a6b29f-57dc-462a-a348-59cdd042c001",
+      "description": "Exported from MOMTC property mitigates"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--278ae4e7-be13-4492-849f-f8cac966e360",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "target_ref": "infrastructure--ab7ec9b6-7c43-4f83-891f-7c03e5cdb3bf",
+      "description": "Exported from MOMTC property controls_infrastructure"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--32624cc9-af0c-47d7-a301-e9686f798377",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "target_ref": "threat-actor--4cf6e63e-a0d1-44d6-be04-8d80a5a6c773",
+      "description": "Exported from MOMTC property is_behaviorally_similar_to"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--33d0078c-d51e-4bc6-8361-08fc5e17002b",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--4cf6e63e-a0d1-44d6-be04-8d80a5a6c773",
+      "target_ref": "malware--2c54726f-6bb5-4263-bdb4-b4d85bb9a26a",
+      "description": "Exported from MOMTC property employs_capability"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--37f2be9f-3bd0-48b4-acac-9240452bb776",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "target_ref": "tool--3402e495-3fed-4fa0-9261-a32673c2f222",
+      "description": "Exported from MOMTC property employs_capability"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3d743d3b-a35b-4ce0-a200-dbd84e31de53",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--ee8211ca-3220-416f-9174-30715c1a358c",
+      "target_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "description": "Exported from MOMTC property orchestrates"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4455f06c-8676-4879-8d2a-9cc6b8879ab8",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4c30783b-0ca3-4f64-804e-006dbd99c6d2",
+      "target_ref": "attack-pattern--3503b7ea-58c9-40f3-978d-99858d818a55",
+      "description": "Exported from MOMTC property generates_indicator"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--455aef58-5463-4d2f-970f-10a1ce0e9c36",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "remediates",
+      "source_ref": "course-of-action--084a6b30-ea7c-419c-a3ef-d0d476f2bead",
+      "target_ref": "vulnerability--afc07c1f-ae5d-45a8-a3b5-f5c00b08e1b0",
+      "description": "Exported from MOMTC property is_remediated_by"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4a757bb9-5149-4a40-aa4d-2b9b8b6acbf4",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--9c87bcd5-815e-4bfd-826b-7aee4c98a7c0",
+      "target_ref": "tool--f4933cdb-8854-4b08-985a-608681dac68a",
+      "description": "Exported from MOMTC property is_implemented_via"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4f8c03ee-6d90-4c38-834c-34624546b22f",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--7bd2da02-1fa6-4c01-93b8-aaa8fc0f1e75",
+      "target_ref": "attack-pattern--3503b7ea-58c9-40f3-978d-99858d818a55",
+      "description": "Exported from MOMTC property generates_indicator"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5aa0025b-38b4-41d8-accc-07ea528dbde2",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "target_ref": "malware--7398493a-a574-4f83-a17a-11ae56362a78",
+      "description": "Exported from MOMTC property employs_capability"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5b69a17d-068f-434c-8eff-07ebfffa23cb",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--aa120299-3a8c-4b71-a4d6-efe129af0704",
+      "target_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "description": "Exported from MOMTC property is_attributable_to"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6b0291f9-3c1e-463d-852b-3fdd9bb31519",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--084a6b30-ea7c-419c-a3ef-d0d476f2bead",
+      "target_ref": "attack-pattern--6ca9e7b2-59a7-40d8-a57e-66b049bca859",
+      "description": "Exported from MOMTC property mitigates"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6be87fe5-6e59-479f-8740-ccfcc78cb4b5",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f0ae97ca-1742-41f7-9352-efa052581230",
+      "target_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "description": "Exported from MOMTC property is_attributable_to"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6db147cd-4247-4d3f-a31f-d009240c8807",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f0ae97ca-1742-41f7-9352-efa052581230",
+      "target_ref": "attack-pattern--3503b7ea-58c9-40f3-978d-99858d818a55",
+      "description": "Exported from MOMTC property generates_indicator"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--75f4e6b0-3abd-4116-9f06-1836b097f94c",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "target_ref": "tool--f4933cdb-8854-4b08-985a-608681dac68a",
+      "description": "Exported from MOMTC property employs_capability"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--77d8a3cf-01ad-4cc8-9d85-e1373cfe2606",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--0f58c80a-daa1-4161-b752-351d009de76a",
+      "target_ref": "attack-pattern--9c87bcd5-815e-4bfd-826b-7aee4c98a7c0",
+      "description": "Exported from MOMTC property is_part_of_technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7aac56a3-6d87-4cf6-9733-7a4c925e15e1",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "course-of-action--db25fd02-1f73-4d34-bc87-c56e6bf261d8",
+      "target_ref": "course-of-action--ff6cbb22-661e-4792-869c-3fbf6d25e1e1",
+      "description": "Exported from MOMTC property has_sub_countermeasure"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7f681bf3-547c-4ef9-98ce-79d825a0490e",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "target_ref": "infrastructure--76947941-0e57-4377-8d68-14249fc628d9",
+      "description": "Exported from MOMTC property controls_infrastructure"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b1f370f7-2e95-4f34-9ef6-bf45a4ae1e72",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "campaign--ee8211ca-3220-416f-9174-30715c1a358c",
+      "target_ref": "attack-pattern--3503b7ea-58c9-40f3-978d-99858d818a55",
+      "description": "Exported from MOMTC property campaign_employs"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b20d5b95-4151-430f-9a5e-4658564cf47c",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "target_ref": "malware--2c54726f-6bb5-4263-bdb4-b4d85bb9a26a",
+      "description": "Exported from MOMTC property employs_capability"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b20e1545-a0b3-4dfc-8904-2d687f1a5f68",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--084a6b30-ea7c-419c-a3ef-d0d476f2bead",
+      "target_ref": "attack-pattern--6a1dbc38-f7bc-4703-b1b3-eae4829fa01c",
+      "description": "Exported from MOMTC property mitigates"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b4377559-66ab-4237-9939-f17a8e6664b4",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--3130ed84-47b9-4488-ad9d-72d6003759e3",
+      "target_ref": "attack-pattern--9c87bcd5-815e-4bfd-826b-7aee4c98a7c0",
+      "description": "Exported from MOMTC property mitigates"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b507dc23-ae29-401b-90e9-f56493269d4e",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--aa120299-3a8c-4b71-a4d6-efe129af0704",
+      "target_ref": "attack-pattern--de865035-3b91-45ec-8138-facf7c541e8a",
+      "description": "Exported from MOMTC property generates_indicator"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--be1b8f23-f33f-4a55-9aca-2ed22945607d",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--5b589c21-c3d1-488b-a190-8ead3a1b0c68",
+      "target_ref": "attack-pattern--d6470119-71a4-4bf0-9ecf-0ae69dbdc0ba",
+      "description": "Exported from MOMTC property is_part_of_technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c0a3a12a-f27e-4927-9132-615603370657",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--db25fd02-1f73-4d34-bc87-c56e6bf261d8",
+      "target_ref": "attack-pattern--6ca9e7b2-59a7-40d8-a57e-66b049bca859",
+      "description": "Exported from MOMTC property mitigates"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c20ebccc-b042-459f-9af2-b1b06987a508",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--10eb489f-8d49-4cdb-aab8-5a005c24fd3e",
+      "target_ref": "attack-pattern--eaeb9051-7c31-42c9-871f-7261288027ef",
+      "description": "Exported from MOMTC property is_part_of_technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cc6b8424-ee70-45d3-820b-d3346752466a",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "campaign--ee8211ca-3220-416f-9174-30715c1a358c",
+      "target_ref": "attack-pattern--9c87bcd5-815e-4bfd-826b-7aee4c98a7c0",
+      "description": "Exported from MOMTC property campaign_employs"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d3cb6ecb-f79d-44d3-94ca-96a81fd0a82e",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--de865035-3b91-45ec-8138-facf7c541e8a",
+      "target_ref": "attack-pattern--4e714a64-6077-46a7-a387-8efd726d5264",
+      "description": "Exported from MOMTC property is_part_of_technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--db0767a5-3526-49b6-94b9-20e264df6231",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--09ae109d-dc3b-4861-8cf8-fdf91f2d7069",
+      "target_ref": "threat-actor--8e3066ff-2698-4c7d-ac38-f87fa711e442",
+      "description": "Exported from MOMTC property is_attributable_to"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ec80bd91-5edc-4752-9c5d-8c6f777e81e2",
+      "created": "2026-11-05T00:00:00.000Z",
+      "modified": "2026-11-05T00:00:00.000Z",
+      "relationship_type": "uses",
+      "source_ref": "campaign--ee8211ca-3220-416f-9174-30715c1a358c",
+      "target_ref": "attack-pattern--8df481c6-ae37-4fc7-930a-af9d1c5826a4",
+      "description": "Exported from MOMTC property campaign_employs"
+    }
+  ]
+}
