@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use MOMTC, please cite it as below."
+title: "MOMTC: Modular Ontology for Multidimensional Cyber Threat Classification"
+version: 2.0.0
+license: MIT
+repository-code: "https://github.com/benchaabenameny-sys/MOMTC"
+authors:
+  - family-names: "Ben Chaaben"
+    given-names: "Ameni"
+    affiliation: "LARODEC Laboratory, University of Jendouba, Tunisia"
+  - family-names: "Jouini"
+    given-names: "Mouna"
+    affiliation: "LARODEC Laboratory, University of Jendouba, Tunisia"
+  - family-names: "Ben Arfa Rabai"
+    given-names: "Latifa"
+    affiliation: "LARODEC Laboratory, University of Tunis, Tunisia"
+keywords:
+  - ontology
+  - OWL 2
+  - cyber threat intelligence
+  - threat classification
+  - MITRE ATT&CK
+  - D3FEND
+  - STIX
+preferred-citation:
+  type: conference-paper
+  title: "A Modular Ontology for Multidimensional Cyber Threat Classification"
+  authors:
+    - family-names: "Ben Chaaben"
+      given-names: "Ameni"
+    - family-names: "Jouini"
+      given-names: "Mouna"
+    - family-names: "Ben Arfa Rabai"
+      given-names: "Latifa"
+  collection-title: "Proceedings of the 18th International Conference on Security of Information and Networks (SINCONF 2026)"
+  year: 2026

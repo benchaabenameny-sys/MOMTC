@@ -1,0 +1,10 @@
+# Never commit credentials or local caches
+cle_openrouter.txt
+.env
+.env.txt
+*.key
+cache_reponses/
+cache_campagne/
+__pycache__/
+erreurs_campagne.jsonl
+article/
