@@ -1,0 +1,1077 @@
+@prefix : <https://attack.mitre.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/momtc#> a owl:Ontology ;
+    owl:versionIRI <http://w3id.org/momtc/2.0.0> .
+
+:Artifact_File a owl:NamedIndividual,
+        :D3FEND_Digital_Artifact .
+
+:CVE_2020_3259 a owl:NamedIndividual,
+        :CVE_Vulnerabilities ;
+    :affects :Cisco_ASA ;
+    :exhibits_weakness :CWE_200_Exposure_Of_Sensitive_Information ;
+    :generates_indicator :IoC_Akira_File_Extension ;
+    :has_cve_identifier "CVE-2020-3259"^^xsd:string ;
+    :has_nvd_entry "https://nvd.nist.gov/vuln/detail/CVE-2020-3259"^^xsd:anyURI ;
+    :has_published_date "2020-05-06T00:00:00"^^xsd:dateTime ;
+    :has_risk_assessment :RA_CVE_2020_3259 ;
+    :is_remediated_by :D3_NI_Network_Isolation .
+
+:CVE_2023_20269 a owl:NamedIndividual,
+        :CVE_Vulnerabilities ;
+    :affects :Cisco_ASA,
+        :Cisco_FTD ;
+    :exhibits_weakness :CWE_288_Authentication_Bypass_Alternate_Path,
+        :CWE_863_Incorrect_Authorization ;
+    :has_cve_identifier "CVE-2023-20269"^^xsd:string ;
+    :has_nvd_entry "https://nvd.nist.gov/vuln/detail/CVE-2023-20269"^^xsd:anyURI ;
+    :has_published_date "2023-09-06T00:00:00"^^xsd:dateTime ;
+    :has_risk_assessment :RA_CVE_2023_20269 ;
+    :is_remediated_by :D3_MFA_Multi_Factor_Authentication .
+
+:D3_CH_Credential_Hardening a owl:NamedIndividual,
+        :D3FEND_Countermeasure ;
+    :has_effectiveness_score 0.75 ;
+    :has_implementation_status :Status_Not_Implemented ;
+    :has_sub_countermeasure :D3_OTP_One_Time_Password ;
+    :is_realization_of_tactic :Harden_Tactic ;
+    :mitigates :T1078_Valid_Accounts .
+
+:D3_NTA_Network_Traffic_Analysis a owl:NamedIndividual,
+        :D3FEND_Countermeasure ;
+    :cm_relates_to_artifact :Artifact_Network_Traffic ;
+    :employs_detection_mechanism :DM_EDR_Behavioral_Detection ;
+    :has_effectiveness_score 0.65 ;
+    :has_implementation_status :Status_Implemented ;
+    :mitigates :T1567_Exfiltration_Over_Web_Service .
+
+:D3_RO_Restore_Object a owl:NamedIndividual,
+        :D3FEND_Countermeasure ;
+    :defends_asset :Backup_Server_Asset ;
+    :has_effectiveness_score 0.85 ;
+    :has_implementation_status :Status_Not_Implemented ;
+    :is_formalized_by :NIST_CP_9_System_Backup ;
+    :is_realization_of_tactic :Restore_Tactic ;
+    :mitigates :T1490_Inhibit_System_Recovery .
+
+:Expert a owl:NamedIndividual,
+        :Sophistication_Level ;
+    :has_sophistication_rank 5 .
+
+:Helpdesk_Impersonation_Vector a owl:NamedIndividual .
+
+:IT_Compromised_Admin_Account a owl:NamedIndividual,
+        :Insider_Threat ;
+    :has_insider_risk_score 8.0 ;
+    :is_realized_via :T1136_002_Domain_Account ;
+    :originates_from :HF_VPN_User_Without_MFA .
+
+:Inactive_VPN_Account_Access a owl:NamedIndividual,
+        :Attack_Vector .
+
+:Innovator a owl:NamedIndividual,
+        :Sophistication_Level ;
+    :has_sophistication_rank 6 .
+
+:Intermediate a owl:NamedIndividual,
+        :Sophistication_Level ;
+    :has_sophistication_rank 3 .
+
+:Minimal a owl:NamedIndividual,
+        :Sophistication_Level ;
+    :has_sophistication_rank 2 .
+
+:NIST_SI_2_Flaw_Remediation a owl:NamedIndividual,
+        :Security_Control .
+
+:None a owl:NamedIndividual,
+        :Sophistication_Level ;
+    :has_sophistication_rank 1 .
+
+:Phishing_Resistant_MFA a owl:NamedIndividual ;
+    :addresses_human_factor :Helpdesk_Agent_Verification_Gap .
+
+:Strategic a owl:NamedIndividual,
+        :Sophistication_Level ;
+    :has_sophistication_rank 7 .
+
+:T1003_001_LSASS_Memory a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    :has_sub_technique_id "T1003.001"^^xsd:string ;
+    :is_part_of_technique :T1003_OS_Credential_Dumping .
+
+:T1562_001_Disable_Or_Modify_Tools a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    :is_part_of_technique :T1562_Impair_Defenses .
+
+:T1566_001_Spearphishing_Attachment a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    :has_sub_technique_id "T1566.001"^^xsd:string ;
+    :is_part_of_technique :T1566_Phishing .
+
+:T1566_002_Spearphishing_Link a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    :is_part_of_technique :T1566_Phishing .
+
+:T1567_002_Exfiltration_To_Cloud_Storage a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    :is_part_of_technique :T1567_Exfiltration_Over_Web_Service .
+
+:T1657_Financial_Theft a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:addresses_human_factor a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range :Human_Factor .
+
+:affects a owl:ObjectProperty ;
+    rdfs:domain :CVE_Vulnerabilities ;
+    rdfs:range :CVE_Products .
+
+:applies_to_platform a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range :Platform .
+
+:artifact_of_technique a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Digital_Artifact ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    owl:inverseOf :tech_relates_to_artifact .
+
+:belongs_to_tactic a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    owl:inverseOf :has_tactic .
+
+:campaign_employs a owl:ObjectProperty ;
+    rdfs:domain :Threat_Campaign ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:causes_impact a owl:ObjectProperty ;
+    rdfs:domain :Threat_Campaign ;
+    rdfs:range :Threat_Impact .
+
+:cm_relates_to_artifact a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range :D3FEND_Digital_Artifact .
+
+:controls_infrastructure a owl:ObjectProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range :Infrastructure .
+
+:defends_asset a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range :Targeted_Asset .
+
+:detects a owl:ObjectProperty ;
+    rdfs:domain :Detection_Mechanism ;
+    rdfs:range :Indicators_Of_Compromise .
+
+:employs_capability a owl:ObjectProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range :Threat_Capability .
+
+:employs_detection_mechanism a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range :Detection_Mechanism .
+
+:executes_technique a owl:ObjectProperty ;
+    rdfs:domain :Temporal_Execution ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:exhibits a owl:ObjectProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range :Threat_Behavior .
+
+:exhibits_error_type a owl:ObjectProperty ;
+    rdfs:domain :Human_Factor ;
+    rdfs:range :Human_Error_Type .
+
+:exploits_human_factor a owl:ObjectProperty ;
+    rdfs:domain :Attack_Vector ;
+    rdfs:range :Human_Factor .
+
+:exploits_weakness a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range :CWE_Weakness .
+
+:first_observed a owl:DatatypeProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range xsd:dateTime .
+
+:generates_indicator a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :CVE_Vulnerabilities <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ) ] ;
+    rdfs:range :Indicators_Of_Compromise .
+
+:has_assessment_date a owl:DatatypeProperty ;
+    rdfs:domain :Risk_Assessment ;
+    rdfs:range xsd:dateTime .
+
+:has_asset_criticality a owl:ObjectProperty ;
+    rdfs:domain :Targeted_Asset ;
+    rdfs:range :Asset_Criticality_Level .
+
+:has_assigned_role a owl:ObjectProperty ;
+    rdfs:domain :Targeted_Asset ;
+    rdfs:range :Organizational_Role .
+
+:has_attribution_confidence a owl:DatatypeProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range xsd:decimal .
+
+:has_awareness_level a owl:ObjectProperty ;
+    rdfs:domain :Human_Factor ;
+    rdfs:range :Security_Awareness_Level .
+
+:has_capec_identifier a owl:DatatypeProperty ;
+    rdfs:domain <https://attack.mitre.org/CAPEC:Attack_Pattern> ;
+    rdfs:range xsd:string .
+
+:has_confidence a owl:DatatypeProperty ;
+    rdfs:domain :Indicators_Of_Compromise ;
+    rdfs:range xsd:decimal .
+
+:has_cpe_identifier a owl:DatatypeProperty ;
+    rdfs:domain :CPE_Platform ;
+    rdfs:range xsd:string .
+
+:has_criticality_weight a owl:DatatypeProperty ;
+    rdfs:domain :Asset_Criticality_Level ;
+    rdfs:range xsd:decimal .
+
+:has_cve_identifier a owl:DatatypeProperty ;
+    rdfs:domain :CVE_Vulnerabilities ;
+    rdfs:range xsd:string .
+
+:has_cvss_base_score a owl:DatatypeProperty ;
+    rdfs:domain :Risk_Assessment ;
+    rdfs:range xsd:decimal .
+
+:has_cvss_vector a owl:DatatypeProperty ;
+    rdfs:domain :Risk_Assessment ;
+    rdfs:range xsd:string .
+
+:has_cwe_identifier a owl:DatatypeProperty ;
+    rdfs:domain :CWE_Weakness ;
+    rdfs:range xsd:string .
+
+:has_effectiveness_score a owl:DatatypeProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range xsd:decimal .
+
+:has_end_time a owl:DatatypeProperty ;
+    rdfs:domain :Temporal_Execution ;
+    rdfs:range xsd:dateTime .
+
+:has_epss_score a owl:DatatypeProperty ;
+    rdfs:domain :Risk_Assessment ;
+    rdfs:range xsd:decimal .
+
+:has_execution_risk_score a owl:DatatypeProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range xsd:decimal .
+
+:has_impact_type a owl:ObjectProperty ;
+    rdfs:domain :Threat_Impact ;
+    rdfs:range :Impact_Type .
+
+:has_impact_weight a owl:DatatypeProperty ;
+    rdfs:domain :Threat_Impact ;
+    rdfs:range xsd:decimal .
+
+:has_implementation_status a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range :Mitigation_Status .
+
+:has_indicator_pattern a owl:DatatypeProperty ;
+    rdfs:domain :Indicators_Of_Compromise ;
+    rdfs:range xsd:string .
+
+:has_insider_risk_score a owl:DatatypeProperty ;
+    rdfs:domain :Insider_Threat ;
+    rdfs:range xsd:decimal .
+
+:has_intent a owl:ObjectProperty ;
+    rdfs:domain :Human_Factor ;
+    rdfs:range :Intent .
+
+:has_lifecycle_status a owl:ObjectProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range :Threat_Life_cycle_Status .
+
+:has_motivation a owl:ObjectProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range :Motivation .
+
+:has_nvd_entry a owl:DatatypeProperty ;
+    rdfs:domain :CVE_Vulnerabilities ;
+    rdfs:range xsd:anyURI .
+
+:has_organizational_role a owl:ObjectProperty ;
+    rdfs:domain :Human_Factor ;
+    rdfs:range :Organizational_Role .
+
+:has_published_date a owl:DatatypeProperty ;
+    rdfs:domain :CVE_Vulnerabilities ;
+    rdfs:range xsd:dateTime .
+
+:has_risk_assessment a owl:ObjectProperty ;
+    rdfs:domain :CVE_Vulnerabilities ;
+    rdfs:range :Risk_Assessment ;
+    owl:inverseOf :is_risk_assessment .
+
+:has_severity a owl:ObjectProperty ;
+    rdfs:domain :Risk_Assessment ;
+    rdfs:range :Severity_Level .
+
+:has_sophistication_level a owl:ObjectProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range :Sophistication_Level .
+
+:has_sophistication_rank a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:comment "Ordinal rank of a sophistication level, following the order of the STIX threat-actor-sophistication-ov vocabulary: 1 none, 2 minimal, 3 intermediate, 4 advanced, 5 expert, 6 innovator, 7 strategic. Added in v2.0 after the LLM-assisted evaluation (CQ1)."^^xsd:string ;
+    rdfs:domain :Sophistication_Level ;
+    rdfs:range xsd:integer .
+
+:has_start_time a owl:DatatypeProperty ;
+    rdfs:domain :Temporal_Execution ;
+    rdfs:range xsd:dateTime .
+
+:has_sub_countermeasure a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range :D3FEND_Sub_Countermeasure ;
+    owl:inverseOf :sub_countermeasure_of .
+
+:has_sub_technique_id a owl:DatatypeProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    rdfs:range xsd:string .
+
+:has_tactic_id a owl:DatatypeProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    rdfs:range xsd:string .
+
+:has_technique_id a owl:DatatypeProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range xsd:string .
+
+:has_temporal_execution a owl:ObjectProperty ;
+    rdfs:domain :Threat_Campaign ;
+    rdfs:range :Temporal_Execution .
+
+:has_threat_category a owl:ObjectProperty ;
+    rdfs:domain :Threat_Campaign ;
+    rdfs:range :Threat_Category .
+
+:has_threat_maturity a owl:ObjectProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range :Threat_Maturity .
+
+:has_vector_category a owl:ObjectProperty ;
+    rdfs:domain :Attack_Vector ;
+    rdfs:range :Attack_Vector_Type .
+
+:impacts_asset a owl:ObjectProperty ;
+    rdfs:domain :Threat_Impact ;
+    rdfs:range :Targeted_Asset .
+
+:is_applied_to a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Sub_Countermeasure ;
+    rdfs:range :D3FEND_Digital_Artifact .
+
+:is_attributable_to a owl:ObjectProperty ;
+    rdfs:domain :Indicators_Of_Compromise ;
+    rdfs:range :Threat_Actor_Profiling .
+
+:is_behaviorally_similar_to a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range :Threat_Actor_Profiling .
+
+:is_formalized_by a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range :Security_Control .
+
+:is_identified_by a owl:ObjectProperty ;
+    rdfs:domain :CVE_Products ;
+    rdfs:range :CPE_Platform .
+
+:is_implemented_via a owl:ObjectProperty ;
+    rdfs:domain :Threat_Capability ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:is_known_exploited a owl:DatatypeProperty ;
+    rdfs:domain :Risk_Assessment ;
+    rdfs:range xsd:boolean .
+
+:is_mitigated_by a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range :D3FEND_Countermeasure ;
+    owl:inverseOf :mitigates .
+
+:is_part_of a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain :D3FEND_Digital_Artifact ;
+    rdfs:range :D3FEND_Digital_Artifact .
+
+:is_part_of_technique a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:is_realization_of_tactic a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range :D3FEND_Defensive_Tactics .
+
+:is_realized_via a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :Insider_Threat :Threat_Behavior ) ] ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:is_remediated_by a owl:ObjectProperty ;
+    rdfs:domain :CVE_Vulnerabilities ;
+    rdfs:range :D3FEND_Countermeasure .
+
+:is_result_of a owl:ObjectProperty ;
+    rdfs:domain :Threat_Impact ;
+    rdfs:range :Temporal_Execution ;
+    owl:inverseOf :results_in .
+
+:last_observed a owl:DatatypeProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range xsd:dateTime .
+
+:leverages_attack_vector a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    rdfs:range :Attack_Vector .
+
+:orchestrates a owl:ObjectProperty ;
+    rdfs:domain :Threat_Actor_Profiling ;
+    rdfs:range :Threat_Campaign .
+
+:originates_from a owl:ObjectProperty ;
+    rdfs:domain :Insider_Threat ;
+    rdfs:range :Human_Factor .
+
+:precedes_tactic a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Tactics> .
+
+:provides_access_to a owl:ObjectProperty ;
+    rdfs:domain :Attack_Vector ;
+    rdfs:range :Targeted_Asset .
+
+:realizes_attack_pattern a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range <https://attack.mitre.org/CAPEC:Attack_Pattern> .
+
+:realizes_tactic a owl:ObjectProperty ;
+    rdfs:comment "Constrained to the \"Detect\" individual of D3FEND_Defensive_Tactics"^^xsd:string ;
+    rdfs:domain :Detection_Mechanism ;
+    rdfs:range :D3FEND_Defensive_Tactics .
+
+:recommended_for a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:shares_critical_dependency_with a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:domain :Targeted_Asset ;
+    rdfs:range :Targeted_Asset .
+
+:shares_tactic_with a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:shares_tactic_with_sub a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> .
+
+:supports_attack_vector a owl:ObjectProperty ;
+    rdfs:domain :Infrastructure ;
+    rdfs:range :Attack_Vector .
+
+:targets_asset a owl:ObjectProperty ;
+    rdfs:domain :Temporal_Execution ;
+    rdfs:range :Targeted_Asset .
+
+:utilizes_attack_vector a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range :Attack_Vector .
+
+:Active a owl:NamedIndividual,
+        :Threat_Life_cycle_Status .
+
+:Advanced a owl:NamedIndividual,
+        :Sophistication_Level ;
+    :has_sophistication_rank 4 .
+
+:Akira_C2_Infrastructure a owl:NamedIndividual,
+        :Infrastructure ;
+    :supports_attack_vector :RDP_Access_Vector,
+        :VPN_Exploitation_Vector .
+
+:Akira_Campaign_2023_2025 a owl:NamedIndividual,
+        :Threat_Campaign ;
+    :campaign_employs :T1190_Exploit_Public_Facing_Application,
+        :T1486_Data_Encrypted_For_Impact,
+        :T1567_Exfiltration_Over_Web_Service ;
+    :causes_impact :Akira_Impact_2024 ;
+    :has_temporal_execution :Akira_Execution_Window ;
+    :has_threat_category :Ransomware .
+
+:Akira_Encryptor a owl:NamedIndividual,
+        :Threat_Capability ;
+    :is_implemented_via :T1486_Data_Encrypted_For_Impact .
+
+:Akira_Execution_Window a owl:NamedIndividual,
+        :Temporal_Execution ;
+    :executes_technique :T1190_Exploit_Public_Facing_Application,
+        :T1486_Data_Encrypted_For_Impact ;
+    :has_end_time "2024-01-16T18:45:00"^^xsd:dateTime ;
+    :has_start_time "2024-01-15T02:30:00"^^xsd:dateTime ;
+    :results_in :Akira_Impact_2024 ;
+    :targets_asset :ESXi_Host_Asset,
+        :VPN_Gateway_Asset .
+
+:Akira_Megazord_Affiliate a owl:NamedIndividual,
+        :Threat_Actor_Profiling ;
+    :employs_capability :Megazord ;
+    :exhibits :Double_Extortion_Behavior .
+
+:Akira_Tor_Leak_Site a owl:NamedIndividual,
+        :Infrastructure .
+
+:AnyDesk a owl:NamedIndividual,
+        :Threat_Capability .
+
+:Availability a owl:NamedIndividual,
+        :Impact_Type .
+
+:Awareness_Low a owl:NamedIndividual,
+        :Security_Awareness_Level .
+
+:Awareness_Medium a owl:NamedIndividual,
+        :Security_Awareness_Level .
+
+:CAPEC_163_Spear_Phishing a owl:NamedIndividual,
+        <https://attack.mitre.org/CAPEC:Attack_Pattern> ;
+    :has_capec_identifier "CAPEC-163"^^xsd:string .
+
+:CPE_Cisco_ASA_Software a owl:NamedIndividual,
+        :CPE_Platform ;
+    :has_cpe_identifier "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*"^^xsd:string .
+
+:CPE_Cisco_FTD_Software a owl:NamedIndividual,
+        :CPE_Platform ;
+    :has_cpe_identifier "cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*"^^xsd:string .
+
+:CWE_285_Improper_Authorization a owl:NamedIndividual,
+        :CWE_Weakness ;
+    :has_cwe_identifier "CWE-285"^^xsd:string .
+
+:CWE_288_Authentication_Bypass_Alternate_Path a owl:NamedIndividual,
+        :CWE_Weakness ;
+    :has_cwe_identifier "CWE-288"^^xsd:string .
+
+:CWE_668_Exposure_To_Wrong_Sphere a owl:NamedIndividual,
+        :CWE_Weakness ;
+    :has_cwe_identifier "CWE-668"^^xsd:string .
+
+:Cisco_FTD a owl:NamedIndividual,
+        :CVE_Products ;
+    :is_identified_by :CPE_Cisco_FTD_Software .
+
+:Confidentiality a owl:NamedIndividual,
+        :Impact_Type .
+
+:Critical a owl:NamedIndividual,
+        :Severity_Level .
+
+:Criticality_High a owl:NamedIndividual,
+        :Asset_Criticality_Level ;
+    :has_criticality_weight 0.75 .
+
+:D3_MFA_Multi_Factor_Authentication a owl:NamedIndividual,
+        :D3FEND_Countermeasure ;
+    :addresses_human_factor :HF_VPN_User_Without_MFA ;
+    :cm_relates_to_artifact :Artifact_User_Account ;
+    :defends_asset :VPN_Gateway_Asset ;
+    :employs_detection_mechanism :DM_Account_Anomaly_Monitoring ;
+    :has_effectiveness_score 0.9 ;
+    :has_implementation_status :Status_Implemented ;
+    :is_formalized_by :NIST_IA_2_Identification_And_Authentication ;
+    :is_realization_of_tactic :Harden_Tactic ;
+    :mitigates :T1078_Valid_Accounts,
+        :T1133_External_Remote_Services .
+
+:D3_NI_Network_Isolation a owl:NamedIndividual,
+        :D3FEND_Countermeasure ;
+    :defends_asset :Domain_Controller_Asset ;
+    :has_effectiveness_score 0.7 ;
+    :has_implementation_status :Status_Implemented ;
+    :is_formalized_by :NIST_SC_7_Boundary_Protection ;
+    :is_realization_of_tactic :Isolate_Tactic ;
+    :mitigates :T1190_Exploit_Public_Facing_Application .
+
+:D3_OTP_One_Time_Password a owl:NamedIndividual,
+        :D3FEND_Sub_Countermeasure ;
+    :is_applied_to :Artifact_User_Account .
+
+:DM_Account_Anomaly_Monitoring a owl:NamedIndividual,
+        :Detection_Mechanism ;
+    :detects :IoC_Account_itadm .
+
+:DM_EDR_Behavioral_Detection a owl:NamedIndividual,
+        :Detection_Mechanism ;
+    :detects :IoC_Akira_Encryptor_Hash,
+        :IoC_Akira_File_Extension,
+        :IoC_Megazord_Hash ;
+    :realizes_tactic :Detect_Tactic .
+
+:Detect_Tactic a owl:NamedIndividual,
+        :D3FEND_Defensive_Tactics .
+
+:Error_MFA_Not_Enabled a owl:NamedIndividual,
+        :Human_Error_Type .
+
+:Error_Phishing_Susceptibility a owl:NamedIndividual,
+        :Human_Error_Type .
+
+:Financial_Gain a owl:NamedIndividual,
+        :Motivation .
+
+:HF_Phishing_Victim a owl:NamedIndividual,
+        :Human_Factor ;
+    :exhibits_error_type :Error_Phishing_Susceptibility ;
+    :has_awareness_level :Awareness_Medium ;
+    :has_intent :Intent_Accidental ;
+    :has_organizational_role :Role_Remote_Worker .
+
+:Helpdesk_Agent_Verification_Gap a owl:NamedIndividual .
+
+:High a owl:NamedIndividual,
+        :Severity_Level .
+
+:Integrity a owl:NamedIndividual,
+        :Impact_Type .
+
+:Intent_Accidental a owl:NamedIndividual,
+        :Intent .
+
+:Intent_Negligent a owl:NamedIndividual,
+        :Intent .
+
+:IoC_Ransom_Note_fn_txt a owl:NamedIndividual,
+        :Indicators_Of_Compromise ;
+    :has_indicator_pattern "[file:name = 'fn.txt']"^^xsd:string .
+
+:Isolate_Tactic a owl:NamedIndividual,
+        :D3FEND_Defensive_Tactics .
+
+:Linux a owl:NamedIndividual,
+        :Platform .
+
+:Mature a owl:NamedIndividual,
+        :Threat_Maturity .
+
+:NIST_CP_9_System_Backup a owl:NamedIndividual,
+        :Security_Control .
+
+:NIST_IA_2_Identification_And_Authentication a owl:NamedIndividual,
+        :Security_Control .
+
+:NIST_SC_7_Boundary_Protection a owl:NamedIndividual,
+        :Security_Control .
+
+:RA_CVE_2020_3259 a owl:NamedIndividual,
+        :Risk_Assessment ;
+    :has_assessment_date "2026-10-11T00:00:00"^^xsd:dateTime ;
+    :has_cvss_base_score 7.5 ;
+    :has_epss_score 0.71789 ;
+    :has_severity :High ;
+    :is_known_exploited true .
+
+:RA_CVE_2023_20269 a owl:NamedIndividual,
+        :Risk_Assessment ;
+    :has_assessment_date "2026-10-11T00:00:00"^^xsd:dateTime ;
+    :has_cvss_base_score 9.1 ;
+    :has_epss_score 0.25453 ;
+    :has_severity :Critical ;
+    :is_known_exploited true .
+
+:Ransomware a owl:NamedIndividual,
+        :Threat_Category .
+
+:Rclone a owl:NamedIndividual,
+        :Threat_Capability ;
+    :is_implemented_via :T1567_Exfiltration_Over_Web_Service .
+
+:Restore_Tactic a owl:NamedIndividual,
+        :D3FEND_Defensive_Tactics .
+
+:Social_Engineering a owl:NamedIndividual,
+        :Attack_Vector_Type .
+
+:Spearphishing_Vector a owl:NamedIndividual,
+        :Attack_Vector ;
+    :exploits_human_factor :HF_Phishing_Victim ;
+    :has_vector_category :Social_Engineering .
+
+:T1003_OS_Credential_Dumping a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:T1133_External_Remote_Services a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    :utilizes_attack_vector :RDP_Access_Vector .
+
+:T1136_002_Domain_Account a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> ;
+    :generates_indicator :IoC_Account_itadm ;
+    :has_sub_technique_id "T1136.002"^^xsd:string ;
+    :is_part_of_technique :T1136_Create_Account .
+
+:T1136_Create_Account a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:T1490_Inhibit_System_Recovery a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:T1562_Impair_Defenses a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:TA0001_Initial_Access a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    :has_tactic_id "TA0001"^^xsd:string ;
+    :precedes_tactic :TA0006_Credential_Access .
+
+:TA0003_Persistence a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    :precedes_tactic :TA0005_Defense_Evasion .
+
+:TA0005_Defense_Evasion a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    :precedes_tactic :TA0010_Exfiltration .
+
+:TA0006_Credential_Access a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    :precedes_tactic :TA0003_Persistence .
+
+:TA0010_Exfiltration a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    :precedes_tactic :TA0040_Impact .
+
+:VMware_ESXi a owl:NamedIndividual,
+        :Platform .
+
+:exhibits_weakness a owl:ObjectProperty ;
+    rdfs:domain :CVE_Vulnerabilities ;
+    rdfs:range :CWE_Weakness ;
+    rdfs:subPropertyOf :transitively_exhibits .
+
+:has_tactic a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:is_child_of_weakness a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain :CWE_Weakness ;
+    rdfs:range :CWE_Weakness .
+
+:is_risk_assessment a owl:ObjectProperty ;
+    rdfs:domain :Risk_Assessment ;
+    rdfs:range :CVE_Vulnerabilities .
+
+:mitigates a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Countermeasure ;
+    rdfs:range <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+:results_in a owl:ObjectProperty ;
+    rdfs:domain :Temporal_Execution ;
+    rdfs:range :Threat_Impact .
+
+:sub_countermeasure_of a owl:ObjectProperty ;
+    rdfs:domain :D3FEND_Sub_Countermeasure ;
+    rdfs:range :D3FEND_Countermeasure .
+
+:tech_relates_to_artifact a owl:ObjectProperty ;
+    rdfs:domain <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    rdfs:range :D3FEND_Digital_Artifact .
+
+:transitively_exhibits a owl:ObjectProperty ;
+    rdfs:domain :CVE_Vulnerabilities ;
+    rdfs:range :CWE_Weakness ;
+    owl:propertyChainAxiom ( :exhibits_weakness :is_child_of_weakness ) .
+
+:Akira_Impact_2024 a owl:NamedIndividual,
+        :Threat_Impact ;
+    :has_impact_type :Availability,
+        :Confidentiality,
+        :Integrity ;
+    :has_impact_weight 0.95 ;
+    :impacts_asset :Backup_Server_Asset,
+        :ESXi_Host_Asset .
+
+:Artifact_Network_Traffic a owl:NamedIndividual,
+        :D3FEND_Digital_Artifact .
+
+:CWE_200_Exposure_Of_Sensitive_Information a owl:NamedIndividual,
+        :CWE_Weakness ;
+    :has_cwe_identifier "CWE-200"^^xsd:string ;
+    :is_child_of_weakness :CWE_668_Exposure_To_Wrong_Sphere .
+
+:CWE_863_Incorrect_Authorization a owl:NamedIndividual,
+        :CWE_Weakness ;
+    :has_cwe_identifier "CWE-863"^^xsd:string ;
+    :is_child_of_weakness :CWE_285_Improper_Authorization .
+
+:Cisco_ASA a owl:NamedIndividual,
+        :CVE_Products ;
+    :is_identified_by :CPE_Cisco_ASA_Software .
+
+:Domain_Controller_Asset a owl:NamedIndividual,
+        :Targeted_Asset ;
+    :has_asset_criticality :Criticality_Critical ;
+    :has_assigned_role :Role_System_Admin .
+
+:Double_Extortion_Behavior a owl:NamedIndividual,
+        :Threat_Behavior ;
+    :is_realized_via :T1486_Data_Encrypted_For_Impact .
+
+:ESXi_Host_Asset a owl:NamedIndividual,
+        :Targeted_Asset ;
+    :has_asset_criticality :Criticality_High ;
+    :shares_critical_dependency_with :Backup_Server_Asset .
+
+:Harden_Tactic a owl:NamedIndividual,
+        :D3FEND_Defensive_Tactics .
+
+:IoC_Account_itadm a owl:NamedIndividual,
+        :Indicators_Of_Compromise ;
+    :has_confidence 0.95 ;
+    :has_indicator_pattern "[user-account:account_login = 'itadm']"^^xsd:string ;
+    :is_attributable_to :Akira .
+
+:IoC_Akira_Encryptor_Hash a owl:NamedIndividual,
+        :Indicators_Of_Compromise ;
+    :has_confidence 1.0 ;
+    :has_indicator_pattern "[file:hashes.'SHA-256' = 'd2fd0654710c27dcf37b6c1437880020824e161dd0bf28e3a133ed777242a0ca']"^^xsd:string ;
+    :is_attributable_to :Akira .
+
+:IoC_Akira_File_Extension a owl:NamedIndividual,
+        :Indicators_Of_Compromise ;
+    :has_indicator_pattern "[file:name MATCHES \".*\\\\.akira$\"]"^^xsd:string ;
+    :is_attributable_to :Akira .
+
+:IoC_Megazord_Hash a owl:NamedIndividual,
+        :Indicators_Of_Compromise ;
+    :has_confidence 1.0 ;
+    :has_indicator_pattern "[file:hashes.'SHA-256' = 'ffd9f58e5fe8502249c67cad0123ceeeaa6e9f69b4ec9f9e21511809849eb8fc']"^^xsd:string .
+
+:Megazord a owl:NamedIndividual,
+        :Threat_Capability .
+
+:Motivation a owl:Class .
+
+:Network_Based a owl:NamedIndividual,
+        :Attack_Vector_Type .
+
+:RDP_Access_Vector a owl:NamedIndividual,
+        :Attack_Vector ;
+    :has_vector_category :Network_Based .
+
+:Role_Remote_Worker a owl:NamedIndividual,
+        :Organizational_Role .
+
+:Role_System_Admin a owl:NamedIndividual,
+        :Organizational_Role .
+
+:Status_Not_Implemented a owl:NamedIndividual,
+        :Mitigation_Status .
+
+:T1078_Valid_Accounts a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    :exploits_weakness :CWE_200_Exposure_Of_Sensitive_Information ;
+    :has_technique_id "T1078"^^xsd:string ;
+    :tech_relates_to_artifact :Artifact_User_Account .
+
+:T1566_Phishing a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    :realizes_attack_pattern :CAPEC_163_Spear_Phishing ;
+    :utilizes_attack_vector :Spearphishing_Vector .
+
+:TA0040_Impact a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Tactics> ;
+    :has_tactic_id "TA0040"^^xsd:string .
+
+:Threat_Category a owl:Class .
+
+:Threat_Life_cycle_Status a owl:Class .
+
+:Threat_Maturity a owl:Class .
+
+:VPN_Exploitation_Vector a owl:NamedIndividual,
+        :Attack_Vector ;
+    :exploits_human_factor :HF_VPN_User_Without_MFA ;
+    :has_vector_category :Network_Based ;
+    :provides_access_to :VPN_Gateway_Asset .
+
+:Windows a owl:NamedIndividual,
+        :Platform .
+
+:Akira a owl:NamedIndividual,
+        :Threat_Actor_Profiling ;
+    :controls_infrastructure :Akira_C2_Infrastructure,
+        :Akira_Tor_Leak_Site ;
+    :employs_capability :Akira_Encryptor,
+        :AnyDesk,
+        :Megazord,
+        :Rclone ;
+    :exhibits :Double_Extortion_Behavior ;
+    :first_observed "2023-03-01T00:00:00"^^xsd:dateTime ;
+    :has_attribution_confidence 0.9 ;
+    :has_lifecycle_status :Active ;
+    :has_motivation :Financial_Gain ;
+    :has_sophistication_level :Advanced ;
+    :has_threat_maturity :Mature ;
+    :is_behaviorally_similar_to :Akira_Megazord_Affiliate ;
+    :last_observed "2025-12-01T00:00:00"^^xsd:dateTime ;
+    :orchestrates :Akira_Campaign_2023_2025 .
+
+:Artifact_User_Account a owl:NamedIndividual,
+        :D3FEND_Digital_Artifact .
+
+:Attack_Vector_Type a owl:Class .
+
+:Backup_Server_Asset a owl:NamedIndividual,
+        :Targeted_Asset ;
+    :has_asset_criticality :Criticality_Critical .
+
+<https://attack.mitre.org/CAPEC:Attack_Pattern> a owl:Class .
+
+:Criticality_Critical a owl:NamedIndividual,
+        :Asset_Criticality_Level ;
+    :has_criticality_weight 1.0 .
+
+:HF_VPN_User_Without_MFA a owl:NamedIndividual,
+        :Human_Factor ;
+    :exhibits_error_type :Error_MFA_Not_Enabled ;
+    :has_awareness_level :Awareness_Low ;
+    :has_intent :Intent_Negligent ;
+    :has_organizational_role :Role_Remote_Worker .
+
+:Human_Error_Type a owl:Class .
+
+:Intent a owl:Class .
+
+:Mitigation_Status a owl:Class .
+
+:Security_Awareness_Level a owl:Class .
+
+:Severity_Level a owl:Class .
+
+:Status_Implemented a owl:NamedIndividual,
+        :Mitigation_Status .
+
+:T1190_Exploit_Public_Facing_Application a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    :applies_to_platform :Linux,
+        :Windows ;
+    :belongs_to_tactic :TA0001_Initial_Access ;
+    :exploits_weakness :CWE_863_Incorrect_Authorization ;
+    :has_execution_risk_score 8.5 ;
+    :has_technique_id "T1190"^^xsd:string ;
+    :utilizes_attack_vector :VPN_Exploitation_Vector .
+
+:Threat_Behavior a owl:Class .
+
+:VPN_Gateway_Asset a owl:NamedIndividual,
+        :Targeted_Asset ;
+    :has_asset_criticality :Criticality_Critical ;
+    :has_assigned_role :Role_System_Admin ;
+    :shares_critical_dependency_with :Domain_Controller_Asset .
+
+:Asset_Criticality_Level a owl:Class .
+
+:CPE_Platform a owl:Class .
+
+:CVE_Products a owl:Class .
+
+:D3FEND_Sub_Countermeasure a owl:Class ;
+    rdfs:subClassOf :D3FEND_Countermeasure .
+
+:Impact_Type a owl:Class .
+
+:Infrastructure a owl:Class .
+
+:Insider_Threat a owl:Class ;
+    owl:disjointWith :Threat_Actor_Profiling .
+
+:Organizational_Role a owl:Class .
+
+:Platform a owl:Class .
+
+:T1486_Data_Encrypted_For_Impact a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    :applies_to_platform :VMware_ESXi,
+        :Windows ;
+    :belongs_to_tactic :TA0040_Impact ;
+    :generates_indicator :IoC_Akira_Encryptor_Hash,
+        :IoC_Megazord_Hash,
+        :IoC_Ransom_Note_fn_txt ;
+    :has_execution_risk_score 9.5 ;
+    :has_technique_id "T1486"^^xsd:string .
+
+:T1567_Exfiltration_Over_Web_Service a owl:NamedIndividual,
+        <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> ;
+    :tech_relates_to_artifact :Artifact_Network_Traffic .
+
+:Detection_Mechanism a owl:Class .
+
+:Security_Control a owl:Class .
+
+:D3FEND_Defensive_Tactics a owl:Class .
+
+:Threat_Campaign a owl:Class .
+
+:Threat_Capability a owl:Class .
+
+:Threat_Impact a owl:Class .
+
+:Temporal_Execution a owl:Class .
+
+:D3FEND_Digital_Artifact a owl:Class .
+
+:Human_Factor a owl:Class .
+
+:Sophistication_Level a owl:Class .
+
+:Attack_Vector a owl:Class .
+
+:Indicators_Of_Compromise a owl:Class .
+
+:Risk_Assessment a owl:Class .
+
+:CWE_Weakness a owl:Class .
+
+<https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> a owl:Class ;
+    rdfs:subClassOf <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> .
+
+<https://attack.mitre.org/MITRE_ATT&CK:Tactics> a owl:Class .
+
+:CVE_Vulnerabilities a owl:Class .
+
+:Targeted_Asset a owl:Class .
+
+:Threat_Actor_Profiling a owl:Class .
+
+:D3FEND_Countermeasure a owl:Class .
+
+<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques> a owl:Class .
+

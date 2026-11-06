@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#">
+    <owl:Ontology rdf:about="http://w3id.org/momtc#">
+        <owl:versionIRI rdf:resource="http://w3id.org/momtc/2.0.0"/>
+    </owl:Ontology>
+    <owl:Class rdf:about="https://attack.mitre.org/Asset_Criticality_Level"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Attack_Vector"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Attack_Vector_Type"/>
+    <owl:Class rdf:about="https://attack.mitre.org/CAPEC:Attack_Pattern"/>
+    <owl:Class rdf:about="https://attack.mitre.org/CPE_Platform"/>
+    <owl:Class rdf:about="https://attack.mitre.org/CVE_Products"/>
+    <owl:Class rdf:about="https://attack.mitre.org/CVE_Vulnerabilities"/>
+    <owl:Class rdf:about="https://attack.mitre.org/CWE_Weakness"/>
+    <owl:Class rdf:about="https://attack.mitre.org/D3FEND_Countermeasure"/>
+    <owl:Class rdf:about="https://attack.mitre.org/D3FEND_Defensive_Tactics"/>
+    <owl:Class rdf:about="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+    <owl:Class rdf:about="https://attack.mitre.org/D3FEND_Sub_Countermeasure">
+        <subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://attack.mitre.org/Detection_Mechanism"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Human_Error_Type"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Human_Factor"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Impact_Type"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Indicators_Of_Compromise"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Infrastructure"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Insider_Threat">
+        <owl:disjointWith rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://attack.mitre.org/Intent"/>
+    <owl:Class rdf:about="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    <owl:Class rdf:about="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique">
+        <subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:Class>
+    <owl:Class rdf:about="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Mitigation_Status"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Motivation"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Organizational_Role"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Platform"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Risk_Assessment"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Security_Awareness_Level"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Security_Control"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Severity_Level"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Sophistication_Level"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Targeted_Asset"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Temporal_Execution"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Threat_Actor_Profiling"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Threat_Behavior"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Threat_Campaign"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Threat_Capability"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Threat_Category"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Threat_Impact"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Threat_Life_cycle_Status"/>
+    <owl:Class rdf:about="https://attack.mitre.org/Threat_Maturity"/>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/addresses_human_factor">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Human_Factor"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/affects">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Products"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/applies_to_platform">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Platform"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/artifact_of_technique">
+        <owl:inverseOf rdf:resource="https://attack.mitre.org/tech_relates_to_artifact"/>
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/belongs_to_tactic">
+        <owl:inverseOf rdf:resource="https://attack.mitre.org/has_tactic"/>
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/campaign_employs">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Campaign"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/causes_impact">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Campaign"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Impact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/cm_relates_to_artifact">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/controls_infrastructure">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Infrastructure"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/defends_asset">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/detects">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Detection_Mechanism"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/employs_capability">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Capability"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/employs_detection_mechanism">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Detection_Mechanism"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/executes_technique">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Temporal_Execution"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/exhibits">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Behavior"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/exhibits_error_type">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Human_Factor"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Human_Error_Type"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/exhibits_weakness">
+        <subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/transitively_exhibits"/>
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/exploits_human_factor">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Human_Factor"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/exploits_weakness">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/generates_indicator">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://attack.mitre.org/CVE_Vulnerabilities"/>
+                    <rdf:Description rdf:about="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+                </owl:unionOf>
+            </owl:Class>
+        </domain>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_asset_criticality">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Asset_Criticality_Level"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_assigned_role">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Organizational_Role"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_awareness_level">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Human_Factor"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Security_Awareness_Level"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_impact_type">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Impact"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Impact_Type"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_implementation_status">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Mitigation_Status"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_intent">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Human_Factor"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Intent"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_lifecycle_status">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Life_cycle_Status"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_motivation">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Motivation"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_organizational_role">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Human_Factor"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Organizational_Role"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_risk_assessment">
+        <owl:inverseOf rdf:resource="https://attack.mitre.org/is_risk_assessment"/>
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_severity">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Severity_Level"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_sophistication_level">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Sophistication_Level"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_sub_countermeasure">
+        <owl:inverseOf rdf:resource="https://attack.mitre.org/sub_countermeasure_of"/>
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Sub_Countermeasure"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_tactic">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_temporal_execution">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Campaign"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Temporal_Execution"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_threat_category">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Campaign"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Category"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_threat_maturity">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Maturity"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/has_vector_category">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Attack_Vector_Type"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/impacts_asset">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Impact"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_applied_to">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Sub_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_attributable_to">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_behaviorally_similar_to">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_child_of_weakness">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_formalized_by">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Security_Control"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_identified_by">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Products"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CPE_Platform"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_implemented_via">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Capability"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_mitigated_by">
+        <owl:inverseOf rdf:resource="https://attack.mitre.org/mitigates"/>
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_part_of">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_part_of_technique">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_realization_of_tactic">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Defensive_Tactics"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_realized_via">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#">
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://attack.mitre.org/Insider_Threat"/>
+                    <rdf:Description rdf:about="https://attack.mitre.org/Threat_Behavior"/>
+                </owl:unionOf>
+            </owl:Class>
+        </domain>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_remediated_by">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_result_of">
+        <owl:inverseOf rdf:resource="https://attack.mitre.org/results_in"/>
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Impact"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Temporal_Execution"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/is_risk_assessment">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/leverages_attack_vector">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/mitigates">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/orchestrates">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Campaign"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/originates_from">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Insider_Threat"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Human_Factor"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/precedes_tactic">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/provides_access_to">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/realizes_attack_pattern">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CAPEC:Attack_Pattern"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/realizes_tactic">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Detection_Mechanism"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Defensive_Tactics"/>
+        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Constrained to the &quot;Detect&quot; individual of D3FEND_Defensive_Tactics</comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/recommended_for">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/results_in">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Temporal_Execution"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Impact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/shares_critical_dependency_with">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/shares_tactic_with">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/shares_tactic_with_sub">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/sub_countermeasure_of">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Sub_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/supports_attack_vector">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Infrastructure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/targets_asset">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Temporal_Execution"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/tech_relates_to_artifact">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/transitively_exhibits">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://attack.mitre.org/exhibits_weakness"/>
+            <rdf:Description rdf:about="https://attack.mitre.org/is_child_of_weakness"/>
+        </owl:propertyChainAxiom>
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="https://attack.mitre.org/utilizes_attack_vector">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/first_observed">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_assessment_date">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_attribution_confidence">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_capec_identifier">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CAPEC:Attack_Pattern"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_confidence">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_cpe_identifier">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CPE_Platform"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_criticality_weight">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Asset_Criticality_Level"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_cve_identifier">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_cvss_base_score">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_cvss_vector">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_cwe_identifier">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_effectiveness_score">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_end_time">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Temporal_Execution"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_epss_score">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_execution_risk_score">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_impact_weight">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Impact"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_indicator_pattern">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_insider_risk_score">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Insider_Threat"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_nvd_entry">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_published_date">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_sophistication_rank">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Sophistication_Level"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <comment xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ordinal rank of a sophistication level, following the order of the STIX threat-actor-sophistication-ov vocabulary: 1 none, 2 minimal, 3 intermediate, 4 advanced, 5 expert, 6 innovator, 7 strategic. Added in v2.0 after the LLM-assisted evaluation (CQ1).</comment>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_start_time">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Temporal_Execution"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_sub_technique_id">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_tactic_id">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/has_technique_id">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/is_known_exploited">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://attack.mitre.org/last_observed">
+        <domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Active">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Life_cycle_Status"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Advanced">
+        <rdf:type rdf:resource="https://attack.mitre.org/Sophistication_Level"/>
+        <has_sophistication_rank xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</has_sophistication_rank>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Akira">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <controls_infrastructure xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira_C2_Infrastructure"/>
+        <controls_infrastructure xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira_Tor_Leak_Site"/>
+        <employs_capability xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira_Encryptor"/>
+        <employs_capability xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/AnyDesk"/>
+        <employs_capability xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Megazord"/>
+        <employs_capability xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Rclone"/>
+        <exhibits xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Double_Extortion_Behavior"/>
+        <has_lifecycle_status xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Active"/>
+        <has_motivation xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Financial_Gain"/>
+        <has_sophistication_level xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Advanced"/>
+        <has_threat_maturity xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Mature"/>
+        <is_behaviorally_similar_to xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira_Megazord_Affiliate"/>
+        <orchestrates xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira_Campaign_2023_2025"/>
+        <first_observed xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-01T00:00:00</first_observed>
+        <has_attribution_confidence xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</has_attribution_confidence>
+        <last_observed xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-01T00:00:00</last_observed>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Akira_C2_Infrastructure">
+        <rdf:type rdf:resource="https://attack.mitre.org/Infrastructure"/>
+        <supports_attack_vector xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/RDP_Access_Vector"/>
+        <supports_attack_vector xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/VPN_Exploitation_Vector"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Akira_Campaign_2023_2025">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Campaign"/>
+        <campaign_employs xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1190_Exploit_Public_Facing_Application"/>
+        <campaign_employs xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1486_Data_Encrypted_For_Impact"/>
+        <campaign_employs xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1567_Exfiltration_Over_Web_Service"/>
+        <causes_impact xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira_Impact_2024"/>
+        <has_temporal_execution xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira_Execution_Window"/>
+        <has_threat_category xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Ransomware"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Akira_Encryptor">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Capability"/>
+        <is_implemented_via xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1486_Data_Encrypted_For_Impact"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Akira_Execution_Window">
+        <rdf:type rdf:resource="https://attack.mitre.org/Temporal_Execution"/>
+        <executes_technique xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1190_Exploit_Public_Facing_Application"/>
+        <executes_technique xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1486_Data_Encrypted_For_Impact"/>
+        <results_in xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira_Impact_2024"/>
+        <targets_asset xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/ESXi_Host_Asset"/>
+        <targets_asset xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/VPN_Gateway_Asset"/>
+        <has_end_time xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-16T18:45:00</has_end_time>
+        <has_start_time xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-15T02:30:00</has_start_time>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Akira_Impact_2024">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Impact"/>
+        <has_impact_type xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Availability"/>
+        <has_impact_type xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Confidentiality"/>
+        <has_impact_type xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Integrity"/>
+        <impacts_asset xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Backup_Server_Asset"/>
+        <impacts_asset xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/ESXi_Host_Asset"/>
+        <has_impact_weight xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.95</has_impact_weight>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Akira_Megazord_Affiliate">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Actor_Profiling"/>
+        <employs_capability xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Megazord"/>
+        <exhibits xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Double_Extortion_Behavior"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Akira_Tor_Leak_Site">
+        <rdf:type rdf:resource="https://attack.mitre.org/Infrastructure"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/AnyDesk">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Capability"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Artifact_File">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Artifact_Network_Traffic">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Artifact_User_Account">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Digital_Artifact"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Availability">
+        <rdf:type rdf:resource="https://attack.mitre.org/Impact_Type"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Awareness_Low">
+        <rdf:type rdf:resource="https://attack.mitre.org/Security_Awareness_Level"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Awareness_Medium">
+        <rdf:type rdf:resource="https://attack.mitre.org/Security_Awareness_Level"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Backup_Server_Asset">
+        <rdf:type rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+        <has_asset_criticality xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Criticality_Critical"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CAPEC_163_Spear_Phishing">
+        <rdf:type rdf:resource="https://attack.mitre.org/CAPEC:Attack_Pattern"/>
+        <has_capec_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAPEC-163</has_capec_identifier>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CPE_Cisco_ASA_Software">
+        <rdf:type rdf:resource="https://attack.mitre.org/CPE_Platform"/>
+        <has_cpe_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*</has_cpe_identifier>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CPE_Cisco_FTD_Software">
+        <rdf:type rdf:resource="https://attack.mitre.org/CPE_Platform"/>
+        <has_cpe_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cpe:2.3:a:cisco:secure_firewall_threat_defense:*:*:*:*:*:*:*:*</has_cpe_identifier>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CVE_2020_3259">
+        <rdf:type rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <affects xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Cisco_ASA"/>
+        <exhibits_weakness xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CWE_200_Exposure_Of_Sensitive_Information"/>
+        <generates_indicator xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/IoC_Akira_File_Extension"/>
+        <has_risk_assessment xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/RA_CVE_2020_3259"/>
+        <is_remediated_by xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/D3_NI_Network_Isolation"/>
+        <has_cve_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2020-3259</has_cve_identifier>
+        <has_nvd_entry xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://nvd.nist.gov/vuln/detail/CVE-2020-3259</has_nvd_entry>
+        <has_published_date xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-06T00:00:00</has_published_date>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CVE_2023_20269">
+        <rdf:type rdf:resource="https://attack.mitre.org/CVE_Vulnerabilities"/>
+        <affects xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Cisco_ASA"/>
+        <affects xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Cisco_FTD"/>
+        <exhibits_weakness xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CWE_288_Authentication_Bypass_Alternate_Path"/>
+        <exhibits_weakness xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CWE_863_Incorrect_Authorization"/>
+        <has_risk_assessment xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/RA_CVE_2023_20269"/>
+        <is_remediated_by xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/D3_MFA_Multi_Factor_Authentication"/>
+        <has_cve_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CVE-2023-20269</has_cve_identifier>
+        <has_nvd_entry xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://nvd.nist.gov/vuln/detail/CVE-2023-20269</has_nvd_entry>
+        <has_published_date xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-06T00:00:00</has_published_date>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CWE_200_Exposure_Of_Sensitive_Information">
+        <rdf:type rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+        <is_child_of_weakness xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CWE_668_Exposure_To_Wrong_Sphere"/>
+        <has_cwe_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWE-200</has_cwe_identifier>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CWE_285_Improper_Authorization">
+        <rdf:type rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+        <has_cwe_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWE-285</has_cwe_identifier>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CWE_288_Authentication_Bypass_Alternate_Path">
+        <rdf:type rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+        <has_cwe_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWE-288</has_cwe_identifier>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CWE_668_Exposure_To_Wrong_Sphere">
+        <rdf:type rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+        <has_cwe_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWE-668</has_cwe_identifier>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/CWE_863_Incorrect_Authorization">
+        <rdf:type rdf:resource="https://attack.mitre.org/CWE_Weakness"/>
+        <is_child_of_weakness xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CWE_285_Improper_Authorization"/>
+        <has_cwe_identifier xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWE-863</has_cwe_identifier>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Cisco_ASA">
+        <rdf:type rdf:resource="https://attack.mitre.org/CVE_Products"/>
+        <is_identified_by xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CPE_Cisco_ASA_Software"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Cisco_FTD">
+        <rdf:type rdf:resource="https://attack.mitre.org/CVE_Products"/>
+        <is_identified_by xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CPE_Cisco_FTD_Software"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Confidentiality">
+        <rdf:type rdf:resource="https://attack.mitre.org/Impact_Type"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Critical">
+        <rdf:type rdf:resource="https://attack.mitre.org/Severity_Level"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Criticality_Critical">
+        <rdf:type rdf:resource="https://attack.mitre.org/Asset_Criticality_Level"/>
+        <has_criticality_weight xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</has_criticality_weight>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Criticality_High">
+        <rdf:type rdf:resource="https://attack.mitre.org/Asset_Criticality_Level"/>
+        <has_criticality_weight xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.75</has_criticality_weight>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/D3_CH_Credential_Hardening">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <has_implementation_status xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Status_Not_Implemented"/>
+        <has_sub_countermeasure xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/D3_OTP_One_Time_Password"/>
+        <is_realization_of_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Harden_Tactic"/>
+        <mitigates xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1078_Valid_Accounts"/>
+        <has_effectiveness_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.75</has_effectiveness_score>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/D3_MFA_Multi_Factor_Authentication">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <addresses_human_factor xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/HF_VPN_User_Without_MFA"/>
+        <cm_relates_to_artifact xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Artifact_User_Account"/>
+        <defends_asset xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/VPN_Gateway_Asset"/>
+        <employs_detection_mechanism xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/DM_Account_Anomaly_Monitoring"/>
+        <has_implementation_status xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Status_Implemented"/>
+        <is_formalized_by xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/NIST_IA_2_Identification_And_Authentication"/>
+        <is_realization_of_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Harden_Tactic"/>
+        <mitigates xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1078_Valid_Accounts"/>
+        <mitigates xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1133_External_Remote_Services"/>
+        <has_effectiveness_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</has_effectiveness_score>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/D3_NI_Network_Isolation">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <defends_asset xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Domain_Controller_Asset"/>
+        <has_implementation_status xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Status_Implemented"/>
+        <is_formalized_by xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/NIST_SC_7_Boundary_Protection"/>
+        <is_realization_of_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Isolate_Tactic"/>
+        <mitigates xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1190_Exploit_Public_Facing_Application"/>
+        <has_effectiveness_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</has_effectiveness_score>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/D3_NTA_Network_Traffic_Analysis">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <cm_relates_to_artifact xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Artifact_Network_Traffic"/>
+        <employs_detection_mechanism xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/DM_EDR_Behavioral_Detection"/>
+        <has_implementation_status xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Status_Implemented"/>
+        <mitigates xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1567_Exfiltration_Over_Web_Service"/>
+        <has_effectiveness_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.65</has_effectiveness_score>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/D3_OTP_One_Time_Password">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Sub_Countermeasure"/>
+        <is_applied_to xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Artifact_User_Account"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/D3_RO_Restore_Object">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Countermeasure"/>
+        <defends_asset xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Backup_Server_Asset"/>
+        <has_implementation_status xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Status_Not_Implemented"/>
+        <is_formalized_by xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/NIST_CP_9_System_Backup"/>
+        <is_realization_of_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Restore_Tactic"/>
+        <mitigates xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1490_Inhibit_System_Recovery"/>
+        <has_effectiveness_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.85</has_effectiveness_score>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/DM_Account_Anomaly_Monitoring">
+        <rdf:type rdf:resource="https://attack.mitre.org/Detection_Mechanism"/>
+        <detects xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/IoC_Account_itadm"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/DM_EDR_Behavioral_Detection">
+        <rdf:type rdf:resource="https://attack.mitre.org/Detection_Mechanism"/>
+        <detects xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/IoC_Akira_Encryptor_Hash"/>
+        <detects xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/IoC_Akira_File_Extension"/>
+        <detects xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/IoC_Megazord_Hash"/>
+        <realizes_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Detect_Tactic"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Detect_Tactic">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Defensive_Tactics"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Domain_Controller_Asset">
+        <rdf:type rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+        <has_asset_criticality xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Criticality_Critical"/>
+        <has_assigned_role xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Role_System_Admin"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Double_Extortion_Behavior">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Behavior"/>
+        <is_realized_via xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1486_Data_Encrypted_For_Impact"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/ESXi_Host_Asset">
+        <rdf:type rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+        <has_asset_criticality xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Criticality_High"/>
+        <shares_critical_dependency_with xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Backup_Server_Asset"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Error_MFA_Not_Enabled">
+        <rdf:type rdf:resource="https://attack.mitre.org/Human_Error_Type"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Error_Phishing_Susceptibility">
+        <rdf:type rdf:resource="https://attack.mitre.org/Human_Error_Type"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Expert">
+        <rdf:type rdf:resource="https://attack.mitre.org/Sophistication_Level"/>
+        <has_sophistication_rank xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</has_sophistication_rank>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Financial_Gain">
+        <rdf:type rdf:resource="https://attack.mitre.org/Motivation"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/HF_Phishing_Victim">
+        <rdf:type rdf:resource="https://attack.mitre.org/Human_Factor"/>
+        <exhibits_error_type xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Error_Phishing_Susceptibility"/>
+        <has_awareness_level xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Awareness_Medium"/>
+        <has_intent xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Intent_Accidental"/>
+        <has_organizational_role xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Role_Remote_Worker"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/HF_VPN_User_Without_MFA">
+        <rdf:type rdf:resource="https://attack.mitre.org/Human_Factor"/>
+        <exhibits_error_type xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Error_MFA_Not_Enabled"/>
+        <has_awareness_level xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Awareness_Low"/>
+        <has_intent xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Intent_Negligent"/>
+        <has_organizational_role xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Role_Remote_Worker"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Harden_Tactic">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Defensive_Tactics"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Helpdesk_Agent_Verification_Gap"/>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Helpdesk_Impersonation_Vector"/>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/High">
+        <rdf:type rdf:resource="https://attack.mitre.org/Severity_Level"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/IT_Compromised_Admin_Account">
+        <rdf:type rdf:resource="https://attack.mitre.org/Insider_Threat"/>
+        <is_realized_via xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1136_002_Domain_Account"/>
+        <originates_from xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/HF_VPN_User_Without_MFA"/>
+        <has_insider_risk_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</has_insider_risk_score>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Inactive_VPN_Account_Access">
+        <rdf:type rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Innovator">
+        <rdf:type rdf:resource="https://attack.mitre.org/Sophistication_Level"/>
+        <has_sophistication_rank xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</has_sophistication_rank>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Integrity">
+        <rdf:type rdf:resource="https://attack.mitre.org/Impact_Type"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Intent_Accidental">
+        <rdf:type rdf:resource="https://attack.mitre.org/Intent"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Intent_Negligent">
+        <rdf:type rdf:resource="https://attack.mitre.org/Intent"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Intermediate">
+        <rdf:type rdf:resource="https://attack.mitre.org/Sophistication_Level"/>
+        <has_sophistication_rank xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</has_sophistication_rank>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/IoC_Account_itadm">
+        <rdf:type rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+        <is_attributable_to xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira"/>
+        <has_confidence xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.95</has_confidence>
+        <has_indicator_pattern xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[user-account:account_login = &apos;itadm&apos;]</has_indicator_pattern>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/IoC_Akira_Encryptor_Hash">
+        <rdf:type rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+        <is_attributable_to xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira"/>
+        <has_confidence xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</has_confidence>
+        <has_indicator_pattern xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[file:hashes.&apos;SHA-256&apos; = &apos;d2fd0654710c27dcf37b6c1437880020824e161dd0bf28e3a133ed777242a0ca&apos;]</has_indicator_pattern>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/IoC_Akira_File_Extension">
+        <rdf:type rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+        <is_attributable_to xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Akira"/>
+        <has_indicator_pattern xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[file:name MATCHES &quot;.*\\.akira$&quot;]</has_indicator_pattern>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/IoC_Megazord_Hash">
+        <rdf:type rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+        <has_confidence xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</has_confidence>
+        <has_indicator_pattern xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[file:hashes.&apos;SHA-256&apos; = &apos;ffd9f58e5fe8502249c67cad0123ceeeaa6e9f69b4ec9f9e21511809849eb8fc&apos;]</has_indicator_pattern>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/IoC_Ransom_Note_fn_txt">
+        <rdf:type rdf:resource="https://attack.mitre.org/Indicators_Of_Compromise"/>
+        <has_indicator_pattern xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[file:name = &apos;fn.txt&apos;]</has_indicator_pattern>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Isolate_Tactic">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Defensive_Tactics"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Linux">
+        <rdf:type rdf:resource="https://attack.mitre.org/Platform"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Mature">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Maturity"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Megazord">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Capability"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Minimal">
+        <rdf:type rdf:resource="https://attack.mitre.org/Sophistication_Level"/>
+        <has_sophistication_rank xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</has_sophistication_rank>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/NIST_CP_9_System_Backup">
+        <rdf:type rdf:resource="https://attack.mitre.org/Security_Control"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/NIST_IA_2_Identification_And_Authentication">
+        <rdf:type rdf:resource="https://attack.mitre.org/Security_Control"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/NIST_SC_7_Boundary_Protection">
+        <rdf:type rdf:resource="https://attack.mitre.org/Security_Control"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/NIST_SI_2_Flaw_Remediation">
+        <rdf:type rdf:resource="https://attack.mitre.org/Security_Control"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Network_Based">
+        <rdf:type rdf:resource="https://attack.mitre.org/Attack_Vector_Type"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/None">
+        <rdf:type rdf:resource="https://attack.mitre.org/Sophistication_Level"/>
+        <has_sophistication_rank xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</has_sophistication_rank>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Phishing_Resistant_MFA">
+        <addresses_human_factor xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Helpdesk_Agent_Verification_Gap"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/RA_CVE_2020_3259">
+        <rdf:type rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+        <has_severity xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/High"/>
+        <has_assessment_date xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-10-11T00:00:00</has_assessment_date>
+        <has_cvss_base_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</has_cvss_base_score>
+        <has_epss_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.71789</has_epss_score>
+        <is_known_exploited xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_known_exploited>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/RA_CVE_2023_20269">
+        <rdf:type rdf:resource="https://attack.mitre.org/Risk_Assessment"/>
+        <has_severity xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Critical"/>
+        <has_assessment_date xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-10-11T00:00:00</has_assessment_date>
+        <has_cvss_base_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.1</has_cvss_base_score>
+        <has_epss_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25453</has_epss_score>
+        <is_known_exploited xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_known_exploited>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/RDP_Access_Vector">
+        <rdf:type rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+        <has_vector_category xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Network_Based"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Ransomware">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Category"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Rclone">
+        <rdf:type rdf:resource="https://attack.mitre.org/Threat_Capability"/>
+        <is_implemented_via xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1567_Exfiltration_Over_Web_Service"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Restore_Tactic">
+        <rdf:type rdf:resource="https://attack.mitre.org/D3FEND_Defensive_Tactics"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Role_Remote_Worker">
+        <rdf:type rdf:resource="https://attack.mitre.org/Organizational_Role"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Role_System_Admin">
+        <rdf:type rdf:resource="https://attack.mitre.org/Organizational_Role"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Social_Engineering">
+        <rdf:type rdf:resource="https://attack.mitre.org/Attack_Vector_Type"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Spearphishing_Vector">
+        <rdf:type rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+        <exploits_human_factor xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/HF_Phishing_Victim"/>
+        <has_vector_category xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Social_Engineering"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Status_Implemented">
+        <rdf:type rdf:resource="https://attack.mitre.org/Mitigation_Status"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Status_Not_Implemented">
+        <rdf:type rdf:resource="https://attack.mitre.org/Mitigation_Status"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Strategic">
+        <rdf:type rdf:resource="https://attack.mitre.org/Sophistication_Level"/>
+        <has_sophistication_rank xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</has_sophistication_rank>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1003_001_LSASS_Memory">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <is_part_of_technique xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1003_OS_Credential_Dumping"/>
+        <has_sub_technique_id xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T1003.001</has_sub_technique_id>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1003_OS_Credential_Dumping">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1078_Valid_Accounts">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <exploits_weakness xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CWE_200_Exposure_Of_Sensitive_Information"/>
+        <tech_relates_to_artifact xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Artifact_User_Account"/>
+        <has_technique_id xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T1078</has_technique_id>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1133_External_Remote_Services">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <utilizes_attack_vector xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/RDP_Access_Vector"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1136_002_Domain_Account">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <generates_indicator xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/IoC_Account_itadm"/>
+        <is_part_of_technique xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1136_Create_Account"/>
+        <has_sub_technique_id xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T1136.002</has_sub_technique_id>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1136_Create_Account">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1190_Exploit_Public_Facing_Application">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <applies_to_platform xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Linux"/>
+        <applies_to_platform xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Windows"/>
+        <belongs_to_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/TA0001_Initial_Access"/>
+        <exploits_weakness xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CWE_863_Incorrect_Authorization"/>
+        <utilizes_attack_vector xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/VPN_Exploitation_Vector"/>
+        <has_execution_risk_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.5</has_execution_risk_score>
+        <has_technique_id xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T1190</has_technique_id>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1486_Data_Encrypted_For_Impact">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <applies_to_platform xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/VMware_ESXi"/>
+        <applies_to_platform xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Windows"/>
+        <belongs_to_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/TA0040_Impact"/>
+        <generates_indicator xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/IoC_Akira_Encryptor_Hash"/>
+        <generates_indicator xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/IoC_Megazord_Hash"/>
+        <generates_indicator xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/IoC_Ransom_Note_fn_txt"/>
+        <has_execution_risk_score xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</has_execution_risk_score>
+        <has_technique_id xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T1486</has_technique_id>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1490_Inhibit_System_Recovery">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1562_001_Disable_Or_Modify_Tools">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <is_part_of_technique xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1562_Impair_Defenses"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1562_Impair_Defenses">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1566_001_Spearphishing_Attachment">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <is_part_of_technique xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1566_Phishing"/>
+        <has_sub_technique_id xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T1566.001</has_sub_technique_id>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1566_002_Spearphishing_Link">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <is_part_of_technique xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1566_Phishing"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1566_Phishing">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <realizes_attack_pattern xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/CAPEC_163_Spear_Phishing"/>
+        <utilizes_attack_vector xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Spearphishing_Vector"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1567_002_Exfiltration_To_Cloud_Storage">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Sub-Technique"/>
+        <is_part_of_technique xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/T1567_Exfiltration_Over_Web_Service"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1567_Exfiltration_Over_Web_Service">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+        <tech_relates_to_artifact xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Artifact_Network_Traffic"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/T1657_Financial_Theft">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Offensive_Techniques"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/TA0001_Initial_Access">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <precedes_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/TA0006_Credential_Access"/>
+        <has_tactic_id xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TA0001</has_tactic_id>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/TA0003_Persistence">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <precedes_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/TA0005_Defense_Evasion"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/TA0005_Defense_Evasion">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <precedes_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/TA0010_Exfiltration"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/TA0006_Credential_Access">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <precedes_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/TA0003_Persistence"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/TA0010_Exfiltration">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <precedes_tactic xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/TA0040_Impact"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/TA0040_Impact">
+        <rdf:type rdf:resource="https://attack.mitre.org/MITRE_ATT&amp;CK:Tactics"/>
+        <has_tactic_id xmlns="https://attack.mitre.org/" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TA0040</has_tactic_id>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/VMware_ESXi">
+        <rdf:type rdf:resource="https://attack.mitre.org/Platform"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/VPN_Exploitation_Vector">
+        <rdf:type rdf:resource="https://attack.mitre.org/Attack_Vector"/>
+        <exploits_human_factor xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/HF_VPN_User_Without_MFA"/>
+        <has_vector_category xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Network_Based"/>
+        <provides_access_to xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/VPN_Gateway_Asset"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/VPN_Gateway_Asset">
+        <rdf:type rdf:resource="https://attack.mitre.org/Targeted_Asset"/>
+        <has_asset_criticality xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Criticality_Critical"/>
+        <has_assigned_role xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Role_System_Admin"/>
+        <shares_critical_dependency_with xmlns="https://attack.mitre.org/" rdf:resource="https://attack.mitre.org/Domain_Controller_Asset"/>
+    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://attack.mitre.org/Windows">
+        <rdf:type rdf:resource="https://attack.mitre.org/Platform"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
