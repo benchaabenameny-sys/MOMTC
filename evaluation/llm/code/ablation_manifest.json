@@ -1,0 +1,214 @@
+[
+  {
+    "item_id": "CQ4_A2",
+    "cq_id": "CQ4",
+    "stratum": "A",
+    "condition": "A2",
+    "verite_terrain": 0,
+    "element_manquant": "attack:controls_infrastructure",
+    "taille_car": 5148,
+    "sha256_12": "9851b4d67906",
+    "operation": "recablage du domaine",
+    "cible": "attack:controls_infrastructure",
+    "domaine_origine": [
+      "attack:Threat_Actor_Profiling"
+    ],
+    "domaine_substitue": "attack:Sophistication_Level"
+  },
+  {
+    "item_id": "CQ9_A2",
+    "cq_id": "CQ9",
+    "stratum": "B",
+    "condition": "A2",
+    "verite_terrain": 0,
+    "element_manquant": "attack:precedes_tactic",
+    "taille_car": 8594,
+    "sha256_12": "12a6cc534691",
+    "operation": "recablage du domaine",
+    "cible": "attack:precedes_tactic",
+    "domaine_origine": [
+      "<https://attack.mitre.org/MITRE_ATT&CK:Tactics>"
+    ],
+    "domaine_substitue": "attack:Threat_Behavior"
+  },
+  {
+    "item_id": "CQ10_A1",
+    "cq_id": "CQ10",
+    "stratum": "B",
+    "condition": "A1",
+    "verite_terrain": 0,
+    "element_manquant": "attack:applies_to_platform",
+    "taille_car": 8389,
+    "sha256_12": "34e6b11f2ace",
+    "operation": "suppression",
+    "cible": "attack:applies_to_platform"
+  },
+  {
+    "item_id": "CQ12_A3",
+    "cq_id": "CQ12",
+    "stratum": "C",
+    "condition": "A3",
+    "verite_terrain": 0,
+    "element_manquant": "attack:transitively_exhibits",
+    "taille_car": 5477,
+    "sha256_12": "2f468fff18aa",
+    "operation": "quasi-correspondance",
+    "cible": "attack:has_risk_assessment",
+    "substitut": "attack:transitively_exhibits",
+    "domaine_cible": [
+      "attack:CVE_Vulnerabilities"
+    ],
+    "domaine_substitut": [
+      "attack:CVE_Vulnerabilities"
+    ],
+    "codomaine_cible": [
+      "attack:Risk_Assessment"
+    ],
+    "codomaine_substitut": [
+      "attack:CWE_Weakness"
+    ]
+  },
+  {
+    "item_id": "CQ15_A3",
+    "cq_id": "CQ15",
+    "stratum": "C",
+    "condition": "A3",
+    "verite_terrain": 0,
+    "element_manquant": "attack:exhibits_weakness",
+    "taille_car": 5477,
+    "sha256_12": "2f468fff18aa",
+    "operation": "quasi-correspondance",
+    "cible": "attack:has_risk_assessment",
+    "substitut": "attack:exhibits_weakness",
+    "domaine_cible": [
+      "attack:CVE_Vulnerabilities"
+    ],
+    "domaine_substitut": [
+      "attack:CVE_Vulnerabilities"
+    ],
+    "codomaine_cible": [
+      "attack:Risk_Assessment"
+    ],
+    "codomaine_substitut": [
+      "attack:CWE_Weakness"
+    ]
+  },
+  {
+    "item_id": "CQ17_A2",
+    "cq_id": "CQ17",
+    "stratum": "D",
+    "condition": "A2",
+    "verite_terrain": 0,
+    "element_manquant": "attack:has_impact_type",
+    "taille_car": 4000,
+    "sha256_12": "76090bc04d42",
+    "operation": "recablage du domaine",
+    "cible": "attack:has_impact_type",
+    "domaine_origine": [
+      "attack:Threat_Impact"
+    ],
+    "domaine_substitue": "attack:Asset_Criticality_Level"
+  },
+  {
+    "item_id": "CQ19_A3",
+    "cq_id": "CQ19",
+    "stratum": "D",
+    "condition": "A3",
+    "verite_terrain": 0,
+    "element_manquant": "attack:has_assigned_role",
+    "taille_car": 3778,
+    "sha256_12": "c4c3dd8e1c5e",
+    "operation": "quasi-correspondance",
+    "cible": "attack:has_asset_criticality",
+    "substitut": "attack:has_assigned_role",
+    "domaine_cible": [
+      "attack:Targeted_Asset"
+    ],
+    "domaine_substitut": [
+      "attack:Targeted_Asset"
+    ],
+    "codomaine_cible": [
+      "attack:Asset_Criticality_Level"
+    ],
+    "codomaine_substitut": [
+      "attack:Organizational_Role"
+    ]
+  },
+  {
+    "item_id": "CQ24_A1",
+    "cq_id": "CQ24",
+    "stratum": "E",
+    "condition": "A1",
+    "verite_terrain": 0,
+    "element_manquant": "attack:is_formalized_by",
+    "taille_car": 5317,
+    "sha256_12": "e6c6c7991191",
+    "operation": "suppression",
+    "cible": "attack:is_formalized_by"
+  },
+  {
+    "item_id": "CQ26_A2",
+    "cq_id": "CQ26",
+    "stratum": "F",
+    "condition": "A2",
+    "verite_terrain": 0,
+    "element_manquant": "attack:has_intent",
+    "taille_car": 2785,
+    "sha256_12": "c59e3ae95694",
+    "operation": "recablage du domaine",
+    "cible": "attack:has_intent",
+    "domaine_origine": [
+      "attack:Human_Factor"
+    ],
+    "domaine_substitue": "attack:Targeted_Asset"
+  },
+  {
+    "item_id": "CQ37_A1",
+    "cq_id": "CQ37",
+    "stratum": "cross",
+    "condition": "A1",
+    "verite_terrain": 0,
+    "element_manquant": "attack:detects",
+    "taille_car": 10311,
+    "sha256_12": "ba83ede4fa31",
+    "operation": "suppression",
+    "cible": "attack:detects"
+  },
+  {
+    "item_id": "CQ38_A1",
+    "cq_id": "CQ38",
+    "stratum": "cross",
+    "condition": "A1",
+    "verite_terrain": 0,
+    "element_manquant": "attack:impacts_asset",
+    "taille_car": 8187,
+    "sha256_12": "03fa903aaee4",
+    "operation": "suppression",
+    "cible": "attack:impacts_asset"
+  },
+  {
+    "item_id": "CQ33_A3",
+    "cq_id": "CQ33",
+    "stratum": "cross",
+    "condition": "A3",
+    "verite_terrain": 0,
+    "element_manquant": "attack:provides_access_to",
+    "taille_car": 13740,
+    "sha256_12": "a53d362952b1",
+    "operation": "quasi-correspondance",
+    "cible": "attack:exploits_human_factor",
+    "substitut": "attack:provides_access_to",
+    "domaine_cible": [
+      "attack:Attack_Vector"
+    ],
+    "domaine_substitut": [
+      "attack:Attack_Vector"
+    ],
+    "codomaine_cible": [
+      "attack:Human_Factor"
+    ],
+    "codomaine_substitut": [
+      "attack:Targeted_Asset"
+    ]
+  }
+]

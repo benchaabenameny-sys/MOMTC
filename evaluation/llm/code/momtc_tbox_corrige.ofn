@@ -1,0 +1,710 @@
+Prefix(:=<http://www.semanticweb.org/amani/ontologies/2026/8/untitled-ontology-166/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(attack:=<https://attack.mitre.org/>)
+
+
+Ontology(<http://w3id.org/momtc#>
+
+Declaration(Class(attack:Asset_Criticality_Level))
+Declaration(Class(attack:Attack_Vector))
+Declaration(Class(attack:Attack_Vector_Type))
+Declaration(Class(attack:CPE_Platform))
+Declaration(Class(attack:CVE_Products))
+Declaration(Class(attack:CVE_Vulnerabilities))
+Declaration(Class(attack:CWE_Weakness))
+Declaration(Class(attack:D3FEND_Countermeasure))
+Declaration(Class(attack:D3FEND_Defensive_Tactics))
+Declaration(Class(attack:D3FEND_Digital_Artifact))
+Declaration(Class(attack:D3FEND_Sub_Countermeasure))
+Declaration(Class(attack:Detection_Mechanism))
+Declaration(Class(attack:Human_Error_Type))
+Declaration(Class(attack:Human_Factor))
+Declaration(Class(attack:Impact_Type))
+Declaration(Class(attack:Indicators_Of_Compromise))
+Declaration(Class(attack:Infrastructure))
+Declaration(Class(attack:Insider_Threat))
+Declaration(Class(attack:Intent))
+Declaration(Class(attack:Mitigation_Status))
+Declaration(Class(attack:Motivation))
+Declaration(Class(attack:Organizational_Role))
+Declaration(Class(attack:Platform))
+Declaration(Class(attack:Risk_Assessment))
+Declaration(Class(attack:Security_Awareness_Level))
+Declaration(Class(attack:Security_Control))
+Declaration(Class(attack:Severity_Level))
+Declaration(Class(attack:Sophistication_Level))
+Declaration(Class(attack:Targeted_Asset))
+Declaration(Class(attack:Temporal_Execution))
+Declaration(Class(attack:Threat_Actor_Profiling))
+Declaration(Class(attack:Threat_Behavior))
+Declaration(Class(attack:Threat_Campaign))
+Declaration(Class(attack:Threat_Capability))
+Declaration(Class(attack:Threat_Category))
+Declaration(Class(attack:Threat_Impact))
+Declaration(Class(attack:Threat_Life_cycle_Status))
+Declaration(Class(attack:Threat_Maturity))
+Declaration(Class(attack:CAPEC:Attack_Pattern))
+Declaration(Class(<https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>))
+Declaration(Class(<https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>))
+Declaration(Class(<https://attack.mitre.org/MITRE_ATT&CK:Tactics>))
+Declaration(ObjectProperty(attack:addresses_human_factor))
+Declaration(ObjectProperty(attack:affects))
+Declaration(ObjectProperty(attack:applies_to_platform))
+Declaration(ObjectProperty(attack:artifact_of_technique))
+Declaration(ObjectProperty(attack:belongs_to_tactic))
+Declaration(ObjectProperty(attack:campaign_employs))
+Declaration(ObjectProperty(attack:causes_impact))
+Declaration(ObjectProperty(attack:cm_relates_to_artifact))
+Declaration(ObjectProperty(attack:controls_infrastructure))
+Declaration(ObjectProperty(attack:defends_asset))
+Declaration(ObjectProperty(attack:detects))
+Declaration(ObjectProperty(attack:employs_capability))
+Declaration(ObjectProperty(attack:employs_detection_mechanism))
+Declaration(ObjectProperty(attack:executes_technique))
+Declaration(ObjectProperty(attack:exhibits))
+Declaration(ObjectProperty(attack:exhibits_error_type))
+Declaration(ObjectProperty(attack:exhibits_weakness))
+Declaration(ObjectProperty(attack:exploits_human_factor))
+Declaration(ObjectProperty(attack:exploits_weakness))
+Declaration(ObjectProperty(attack:generates_indicator))
+Declaration(ObjectProperty(attack:has_asset_criticality))
+Declaration(ObjectProperty(attack:has_assigned_role))
+Declaration(ObjectProperty(attack:has_awareness_level))
+Declaration(ObjectProperty(attack:has_impact_type))
+Declaration(ObjectProperty(attack:has_implementation_status))
+Declaration(ObjectProperty(attack:has_intent))
+Declaration(ObjectProperty(attack:has_lifecycle_status))
+Declaration(ObjectProperty(attack:has_motivation))
+Declaration(ObjectProperty(attack:has_organizational_role))
+Declaration(ObjectProperty(attack:has_risk_assessment))
+Declaration(ObjectProperty(attack:has_severity))
+Declaration(ObjectProperty(attack:has_sophistication_level))
+Declaration(ObjectProperty(attack:has_sub_countermeasure))
+Declaration(ObjectProperty(attack:has_tactic))
+Declaration(ObjectProperty(attack:has_temporal_execution))
+Declaration(ObjectProperty(attack:has_threat_category))
+Declaration(ObjectProperty(attack:has_threat_maturity))
+Declaration(ObjectProperty(attack:has_vector_category))
+Declaration(ObjectProperty(attack:impacts_asset))
+Declaration(ObjectProperty(attack:is_applied_to))
+Declaration(ObjectProperty(attack:is_attributable_to))
+Declaration(ObjectProperty(attack:is_behaviorally_similar_to))
+Declaration(ObjectProperty(attack:is_child_of_weakness))
+Declaration(ObjectProperty(attack:is_formalized_by))
+Declaration(ObjectProperty(attack:is_identified_by))
+Declaration(ObjectProperty(attack:is_implemented_via))
+Declaration(ObjectProperty(attack:is_mitigated_by))
+Declaration(ObjectProperty(attack:is_part_of))
+Declaration(ObjectProperty(attack:is_part_of_technique))
+Declaration(ObjectProperty(attack:is_realization_of_tactic))
+Declaration(ObjectProperty(attack:is_realized_via))
+Declaration(ObjectProperty(attack:is_remediated_by))
+Declaration(ObjectProperty(attack:is_result_of))
+Declaration(ObjectProperty(attack:is_risk_assessment))
+Declaration(ObjectProperty(attack:leverages_attack_vector))
+Declaration(ObjectProperty(attack:mitigates))
+Declaration(ObjectProperty(attack:orchestrates))
+Declaration(ObjectProperty(attack:originates_from))
+Declaration(ObjectProperty(attack:precedes_tactic))
+Declaration(ObjectProperty(attack:provides_access_to))
+Declaration(ObjectProperty(attack:realizes_attack_pattern))
+Declaration(ObjectProperty(attack:realizes_tactic))
+Declaration(ObjectProperty(attack:recommended_for))
+Declaration(ObjectProperty(attack:results_in))
+Declaration(ObjectProperty(attack:shares_critical_dependency_with))
+Declaration(ObjectProperty(attack:shares_tactic_with))
+Declaration(ObjectProperty(attack:shares_tactic_with_sub))
+Declaration(ObjectProperty(attack:sub_countermeasure_of))
+Declaration(ObjectProperty(attack:supports_attack_vector))
+Declaration(ObjectProperty(attack:targets_asset))
+Declaration(ObjectProperty(attack:tech_relates_to_artifact))
+Declaration(ObjectProperty(attack:transitively_exhibits))
+Declaration(ObjectProperty(attack:utilizes_attack_vector))
+Declaration(DataProperty(attack:first_observed))
+Declaration(DataProperty(attack:has_assessment_date))
+Declaration(DataProperty(attack:has_attribution_confidence))
+Declaration(DataProperty(attack:has_capec_identifier))
+Declaration(DataProperty(attack:has_confidence))
+Declaration(DataProperty(attack:has_cpe_identifier))
+Declaration(DataProperty(attack:has_criticality_weight))
+Declaration(DataProperty(attack:has_cve_identifier))
+Declaration(DataProperty(attack:has_cvss_base_score))
+Declaration(DataProperty(attack:has_cvss_vector))
+Declaration(DataProperty(attack:has_cwe_identifier))
+Declaration(DataProperty(attack:has_end_time))
+Declaration(DataProperty(attack:has_epss_score))
+Declaration(DataProperty(attack:has_execution_risk_score))
+Declaration(DataProperty(attack:has_impact_weight))
+Declaration(DataProperty(attack:has_indicator_pattern))
+Declaration(DataProperty(attack:has_insider_risk_score))
+Declaration(DataProperty(attack:has_effectiveness_score))
+Declaration(DataProperty(attack:has_nvd_entry))
+Declaration(DataProperty(attack:has_published_date))
+Declaration(DataProperty(attack:has_start_time))
+Declaration(DataProperty(attack:has_sub_technique_id))
+Declaration(DataProperty(attack:has_tactic_id))
+Declaration(DataProperty(attack:has_technique_id))
+Declaration(DataProperty(attack:is_known_exploited))
+Declaration(DataProperty(attack:last_observed))
+Declaration(NamedIndividual(attack:Helpdesk_Agent_Verification_Gap))
+Declaration(NamedIndividual(attack:Helpdesk_Impersonation_Vector))
+Declaration(NamedIndividual(attack:Inactive_VPN_Account_Access))
+Declaration(NamedIndividual(attack:Phishing_Resistant_MFA))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: attack:addresses_human_factor (attack:addresses_human_factor)
+
+ObjectPropertyDomain(attack:addresses_human_factor attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:addresses_human_factor attack:Human_Factor)
+
+# Object Property: attack:affects (attack:affects)
+
+ObjectPropertyDomain(attack:affects attack:CVE_Vulnerabilities)
+ObjectPropertyRange(attack:affects attack:CVE_Products)
+
+# Object Property: attack:applies_to_platform (attack:applies_to_platform)
+
+ObjectPropertyDomain(attack:applies_to_platform <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+ObjectPropertyRange(attack:applies_to_platform attack:Platform)
+
+# Object Property: attack:artifact_of_technique (attack:artifact_of_technique)
+
+InverseObjectProperties(attack:artifact_of_technique attack:tech_relates_to_artifact)
+ObjectPropertyDomain(attack:artifact_of_technique attack:D3FEND_Digital_Artifact)
+ObjectPropertyRange(attack:artifact_of_technique <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:belongs_to_tactic (attack:belongs_to_tactic)
+
+InverseObjectProperties(attack:belongs_to_tactic attack:has_tactic)
+ObjectPropertyDomain(attack:belongs_to_tactic <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+ObjectPropertyRange(attack:belongs_to_tactic <https://attack.mitre.org/MITRE_ATT&CK:Tactics>)
+
+# Object Property: attack:campaign_employs (attack:campaign_employs)
+
+ObjectPropertyDomain(attack:campaign_employs attack:Threat_Campaign)
+ObjectPropertyRange(attack:campaign_employs <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:causes_impact (attack:causes_impact)
+
+ObjectPropertyDomain(attack:causes_impact attack:Threat_Campaign)
+ObjectPropertyRange(attack:causes_impact attack:Threat_Impact)
+
+# Object Property: attack:cm_relates_to_artifact (attack:cm_relates_to_artifact)
+
+ObjectPropertyDomain(attack:cm_relates_to_artifact attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:cm_relates_to_artifact attack:D3FEND_Digital_Artifact)
+
+# Object Property: attack:controls_infrastructure (attack:controls_infrastructure)
+
+ObjectPropertyDomain(attack:controls_infrastructure attack:Threat_Actor_Profiling)
+ObjectPropertyRange(attack:controls_infrastructure attack:Infrastructure)
+
+# Object Property: attack:defends_asset (attack:defends_asset)
+
+ObjectPropertyDomain(attack:defends_asset attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:defends_asset attack:Targeted_Asset)
+
+# Object Property: attack:detects (attack:detects)
+
+ObjectPropertyDomain(attack:detects attack:Detection_Mechanism)
+ObjectPropertyRange(attack:detects attack:Indicators_Of_Compromise)
+
+# Object Property: attack:employs_capability (attack:employs_capability)
+
+ObjectPropertyDomain(attack:employs_capability attack:Threat_Actor_Profiling)
+ObjectPropertyRange(attack:employs_capability attack:Threat_Capability)
+
+# Object Property: attack:employs_detection_mechanism (attack:employs_detection_mechanism)
+
+ObjectPropertyDomain(attack:employs_detection_mechanism attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:employs_detection_mechanism attack:Detection_Mechanism)
+
+# Object Property: attack:executes_technique (attack:executes_technique)
+
+ObjectPropertyDomain(attack:executes_technique attack:Temporal_Execution)
+ObjectPropertyRange(attack:executes_technique <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:exhibits (attack:exhibits)
+
+ObjectPropertyDomain(attack:exhibits attack:Threat_Actor_Profiling)
+ObjectPropertyRange(attack:exhibits attack:Threat_Behavior)
+
+# Object Property: attack:exhibits_error_type (attack:exhibits_error_type)
+
+ObjectPropertyDomain(attack:exhibits_error_type attack:Human_Factor)
+ObjectPropertyRange(attack:exhibits_error_type attack:Human_Error_Type)
+
+# Object Property: attack:exhibits_weakness (attack:exhibits_weakness)
+
+ObjectPropertyDomain(attack:exhibits_weakness attack:CVE_Vulnerabilities)
+ObjectPropertyRange(attack:exhibits_weakness attack:CWE_Weakness)
+
+# Object Property: attack:exploits_human_factor (attack:exploits_human_factor)
+
+ObjectPropertyDomain(attack:exploits_human_factor attack:Attack_Vector)
+ObjectPropertyRange(attack:exploits_human_factor attack:Human_Factor)
+
+# Object Property: attack:exploits_weakness (attack:exploits_weakness)
+
+ObjectPropertyDomain(attack:exploits_weakness <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+ObjectPropertyRange(attack:exploits_weakness attack:CWE_Weakness)
+
+# Object Property: attack:generates_indicator (attack:generates_indicator)
+
+ObjectPropertyDomain(attack:generates_indicator ObjectUnionOf(attack:CVE_Vulnerabilities <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>))
+ObjectPropertyRange(attack:generates_indicator attack:Indicators_Of_Compromise)
+
+# Object Property: attack:has_asset_criticality (attack:has_asset_criticality)
+
+ObjectPropertyDomain(attack:has_asset_criticality attack:Targeted_Asset)
+ObjectPropertyRange(attack:has_asset_criticality attack:Asset_Criticality_Level)
+
+# Object Property: attack:has_assigned_role (attack:has_assigned_role)
+
+ObjectPropertyDomain(attack:has_assigned_role attack:Targeted_Asset)
+ObjectPropertyRange(attack:has_assigned_role attack:Organizational_Role)
+
+# Object Property: attack:has_awareness_level (attack:has_awareness_level)
+
+ObjectPropertyDomain(attack:has_awareness_level attack:Human_Factor)
+ObjectPropertyRange(attack:has_awareness_level attack:Security_Awareness_Level)
+
+# Object Property: attack:has_impact_type (attack:has_impact_type)
+
+ObjectPropertyDomain(attack:has_impact_type attack:Threat_Impact)
+ObjectPropertyRange(attack:has_impact_type attack:Impact_Type)
+
+# Object Property: attack:has_implementation_status (attack:has_implementation_status)
+
+ObjectPropertyDomain(attack:has_implementation_status attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:has_implementation_status attack:Mitigation_Status)
+
+# Object Property: attack:has_intent (attack:has_intent)
+
+ObjectPropertyDomain(attack:has_intent attack:Human_Factor)
+ObjectPropertyRange(attack:has_intent attack:Intent)
+
+# Object Property: attack:has_lifecycle_status (attack:has_lifecycle_status)
+
+ObjectPropertyDomain(attack:has_lifecycle_status attack:Threat_Actor_Profiling)
+ObjectPropertyRange(attack:has_lifecycle_status attack:Threat_Life_cycle_Status)
+
+# Object Property: attack:has_motivation (attack:has_motivation)
+
+ObjectPropertyDomain(attack:has_motivation attack:Threat_Actor_Profiling)
+ObjectPropertyRange(attack:has_motivation attack:Motivation)
+
+# Object Property: attack:has_organizational_role (attack:has_organizational_role)
+
+ObjectPropertyDomain(attack:has_organizational_role attack:Human_Factor)
+ObjectPropertyRange(attack:has_organizational_role attack:Organizational_Role)
+
+# Object Property: attack:has_risk_assessment (attack:has_risk_assessment)
+
+InverseObjectProperties(attack:has_risk_assessment attack:is_risk_assessment)
+ObjectPropertyDomain(attack:has_risk_assessment attack:CVE_Vulnerabilities)
+ObjectPropertyRange(attack:has_risk_assessment attack:Risk_Assessment)
+
+# Object Property: attack:has_severity (attack:has_severity)
+
+ObjectPropertyDomain(attack:has_severity attack:Risk_Assessment)
+ObjectPropertyRange(attack:has_severity attack:Severity_Level)
+
+# Object Property: attack:has_sophistication_level (attack:has_sophistication_level)
+
+ObjectPropertyDomain(attack:has_sophistication_level attack:Threat_Actor_Profiling)
+ObjectPropertyRange(attack:has_sophistication_level attack:Sophistication_Level)
+
+# Object Property: attack:has_sub_countermeasure (attack:has_sub_countermeasure)
+
+InverseObjectProperties(attack:has_sub_countermeasure attack:sub_countermeasure_of)
+ObjectPropertyDomain(attack:has_sub_countermeasure attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:has_sub_countermeasure attack:D3FEND_Sub_Countermeasure)
+
+# Object Property: attack:has_tactic (attack:has_tactic)
+
+ObjectPropertyDomain(attack:has_tactic <https://attack.mitre.org/MITRE_ATT&CK:Tactics>)
+ObjectPropertyRange(attack:has_tactic <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:has_temporal_execution (attack:has_temporal_execution)
+
+ObjectPropertyDomain(attack:has_temporal_execution attack:Threat_Campaign)
+ObjectPropertyRange(attack:has_temporal_execution attack:Temporal_Execution)
+
+# Object Property: attack:has_threat_category (attack:has_threat_category)
+
+ObjectPropertyDomain(attack:has_threat_category attack:Threat_Campaign)
+ObjectPropertyRange(attack:has_threat_category attack:Threat_Category)
+
+# Object Property: attack:has_threat_maturity (attack:has_threat_maturity)
+
+ObjectPropertyDomain(attack:has_threat_maturity attack:Threat_Actor_Profiling)
+ObjectPropertyRange(attack:has_threat_maturity attack:Threat_Maturity)
+
+# Object Property: attack:has_vector_category (attack:has_vector_category)
+
+ObjectPropertyDomain(attack:has_vector_category attack:Attack_Vector)
+ObjectPropertyRange(attack:has_vector_category attack:Attack_Vector_Type)
+
+# Object Property: attack:impacts_asset (attack:impacts_asset)
+
+ObjectPropertyDomain(attack:impacts_asset attack:Threat_Impact)
+ObjectPropertyRange(attack:impacts_asset attack:Targeted_Asset)
+
+# Object Property: attack:is_applied_to (attack:is_applied_to)
+
+ObjectPropertyDomain(attack:is_applied_to attack:D3FEND_Sub_Countermeasure)
+ObjectPropertyRange(attack:is_applied_to attack:D3FEND_Digital_Artifact)
+
+# Object Property: attack:is_attributable_to (attack:is_attributable_to)
+
+ObjectPropertyDomain(attack:is_attributable_to attack:Indicators_Of_Compromise)
+ObjectPropertyRange(attack:is_attributable_to attack:Threat_Actor_Profiling)
+
+# Object Property: attack:is_behaviorally_similar_to (attack:is_behaviorally_similar_to)
+
+SymmetricObjectProperty(attack:is_behaviorally_similar_to)
+ObjectPropertyDomain(attack:is_behaviorally_similar_to attack:Threat_Actor_Profiling)
+ObjectPropertyRange(attack:is_behaviorally_similar_to attack:Threat_Actor_Profiling)
+
+# Object Property: attack:is_child_of_weakness (attack:is_child_of_weakness)
+
+TransitiveObjectProperty(attack:is_child_of_weakness)
+ObjectPropertyDomain(attack:is_child_of_weakness attack:CWE_Weakness)
+ObjectPropertyRange(attack:is_child_of_weakness attack:CWE_Weakness)
+
+# Object Property: attack:is_formalized_by (attack:is_formalized_by)
+
+ObjectPropertyDomain(attack:is_formalized_by attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:is_formalized_by attack:Security_Control)
+
+# Object Property: attack:is_identified_by (attack:is_identified_by)
+
+ObjectPropertyDomain(attack:is_identified_by attack:CVE_Products)
+ObjectPropertyRange(attack:is_identified_by attack:CPE_Platform)
+
+# Object Property: attack:is_implemented_via (attack:is_implemented_via)
+
+ObjectPropertyDomain(attack:is_implemented_via attack:Threat_Capability)
+ObjectPropertyRange(attack:is_implemented_via <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:is_mitigated_by (attack:is_mitigated_by)
+
+InverseObjectProperties(attack:is_mitigated_by attack:mitigates)
+ObjectPropertyDomain(attack:is_mitigated_by <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+ObjectPropertyRange(attack:is_mitigated_by attack:D3FEND_Countermeasure)
+
+# Object Property: attack:is_part_of (attack:is_part_of)
+
+TransitiveObjectProperty(attack:is_part_of)
+ObjectPropertyDomain(attack:is_part_of attack:D3FEND_Digital_Artifact)
+ObjectPropertyRange(attack:is_part_of attack:D3FEND_Digital_Artifact)
+
+# Object Property: attack:is_part_of_technique (attack:is_part_of_technique)
+
+ObjectPropertyDomain(attack:is_part_of_technique <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>)
+ObjectPropertyRange(attack:is_part_of_technique <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:is_realization_of_tactic (attack:is_realization_of_tactic)
+
+ObjectPropertyDomain(attack:is_realization_of_tactic attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:is_realization_of_tactic attack:D3FEND_Defensive_Tactics)
+
+# Object Property: attack:is_realized_via (attack:is_realized_via)
+
+ObjectPropertyDomain(attack:is_realized_via ObjectUnionOf(attack:Insider_Threat attack:Threat_Behavior))
+ObjectPropertyRange(attack:is_realized_via <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:is_remediated_by (attack:is_remediated_by)
+
+ObjectPropertyDomain(attack:is_remediated_by attack:CVE_Vulnerabilities)
+ObjectPropertyRange(attack:is_remediated_by attack:D3FEND_Countermeasure)
+
+# Object Property: attack:is_result_of (attack:is_result_of)
+
+InverseObjectProperties(attack:is_result_of attack:results_in)
+ObjectPropertyDomain(attack:is_result_of attack:Threat_Impact)
+ObjectPropertyRange(attack:is_result_of attack:Temporal_Execution)
+
+# Object Property: attack:is_risk_assessment (attack:is_risk_assessment)
+
+ObjectPropertyDomain(attack:is_risk_assessment attack:Risk_Assessment)
+ObjectPropertyRange(attack:is_risk_assessment attack:CVE_Vulnerabilities)
+
+# Object Property: attack:leverages_attack_vector (attack:leverages_attack_vector)
+
+ObjectPropertyDomain(attack:leverages_attack_vector <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>)
+ObjectPropertyRange(attack:leverages_attack_vector attack:Attack_Vector)
+
+# Object Property: attack:mitigates (attack:mitigates)
+
+ObjectPropertyDomain(attack:mitigates attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:mitigates <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:orchestrates (attack:orchestrates)
+
+ObjectPropertyDomain(attack:orchestrates attack:Threat_Actor_Profiling)
+ObjectPropertyRange(attack:orchestrates attack:Threat_Campaign)
+
+# Object Property: attack:originates_from (attack:originates_from)
+
+ObjectPropertyDomain(attack:originates_from attack:Insider_Threat)
+ObjectPropertyRange(attack:originates_from attack:Human_Factor)
+
+# Object Property: attack:precedes_tactic (attack:precedes_tactic)
+
+TransitiveObjectProperty(attack:precedes_tactic)
+ObjectPropertyDomain(attack:precedes_tactic <https://attack.mitre.org/MITRE_ATT&CK:Tactics>)
+ObjectPropertyRange(attack:precedes_tactic <https://attack.mitre.org/MITRE_ATT&CK:Tactics>)
+
+# Object Property: attack:provides_access_to (attack:provides_access_to)
+
+ObjectPropertyDomain(attack:provides_access_to attack:Attack_Vector)
+ObjectPropertyRange(attack:provides_access_to attack:Targeted_Asset)
+
+# Object Property: attack:realizes_attack_pattern (attack:realizes_attack_pattern)
+
+ObjectPropertyDomain(attack:realizes_attack_pattern <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+ObjectPropertyRange(attack:realizes_attack_pattern attack:CAPEC:Attack_Pattern)
+
+# Object Property: attack:realizes_tactic (attack:realizes_tactic)
+
+AnnotationAssertion(rdfs:comment attack:realizes_tactic "Constrained to the \"Detect\" individual of D3FEND_Defensive_Tactics")
+ObjectPropertyDomain(attack:realizes_tactic attack:Detection_Mechanism)
+ObjectPropertyRange(attack:realizes_tactic attack:D3FEND_Defensive_Tactics)
+
+# Object Property: attack:recommended_for (attack:recommended_for)
+
+ObjectPropertyDomain(attack:recommended_for attack:D3FEND_Countermeasure)
+ObjectPropertyRange(attack:recommended_for <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:results_in (attack:results_in)
+
+ObjectPropertyDomain(attack:results_in attack:Temporal_Execution)
+ObjectPropertyRange(attack:results_in attack:Threat_Impact)
+
+# Object Property: attack:shares_critical_dependency_with (attack:shares_critical_dependency_with)
+
+SymmetricObjectProperty(attack:shares_critical_dependency_with)
+ObjectPropertyDomain(attack:shares_critical_dependency_with attack:Targeted_Asset)
+ObjectPropertyRange(attack:shares_critical_dependency_with attack:Targeted_Asset)
+
+# Object Property: attack:shares_tactic_with (attack:shares_tactic_with)
+
+SymmetricObjectProperty(attack:shares_tactic_with)
+ObjectPropertyDomain(attack:shares_tactic_with <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+ObjectPropertyRange(attack:shares_tactic_with <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+# Object Property: attack:shares_tactic_with_sub (attack:shares_tactic_with_sub)
+
+SymmetricObjectProperty(attack:shares_tactic_with_sub)
+ObjectPropertyDomain(attack:shares_tactic_with_sub <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>)
+ObjectPropertyRange(attack:shares_tactic_with_sub <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>)
+
+# Object Property: attack:sub_countermeasure_of (attack:sub_countermeasure_of)
+
+ObjectPropertyDomain(attack:sub_countermeasure_of attack:D3FEND_Sub_Countermeasure)
+ObjectPropertyRange(attack:sub_countermeasure_of attack:D3FEND_Countermeasure)
+
+# Object Property: attack:supports_attack_vector (attack:supports_attack_vector)
+
+ObjectPropertyDomain(attack:supports_attack_vector attack:Infrastructure)
+ObjectPropertyRange(attack:supports_attack_vector attack:Attack_Vector)
+
+# Object Property: attack:targets_asset (attack:targets_asset)
+
+ObjectPropertyDomain(attack:targets_asset attack:Temporal_Execution)
+ObjectPropertyRange(attack:targets_asset attack:Targeted_Asset)
+
+# Object Property: attack:tech_relates_to_artifact (attack:tech_relates_to_artifact)
+
+ObjectPropertyDomain(attack:tech_relates_to_artifact <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+ObjectPropertyRange(attack:tech_relates_to_artifact attack:D3FEND_Digital_Artifact)
+
+# Object Property: attack:transitively_exhibits (attack:transitively_exhibits)
+
+ObjectPropertyDomain(attack:transitively_exhibits attack:CVE_Vulnerabilities)
+ObjectPropertyRange(attack:transitively_exhibits attack:CWE_Weakness)
+
+# Object Property: attack:utilizes_attack_vector (attack:utilizes_attack_vector)
+
+ObjectPropertyDomain(attack:utilizes_attack_vector <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+ObjectPropertyRange(attack:utilizes_attack_vector attack:Attack_Vector)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: attack:first_observed (attack:first_observed)
+
+DataPropertyDomain(attack:first_observed attack:Threat_Actor_Profiling)
+DataPropertyRange(attack:first_observed xsd:dateTime)
+
+# Data Property: attack:has_assessment_date (attack:has_assessment_date)
+
+DataPropertyDomain(attack:has_assessment_date attack:Risk_Assessment)
+DataPropertyRange(attack:has_assessment_date xsd:dateTime)
+
+# Data Property: attack:has_attribution_confidence (attack:has_attribution_confidence)
+
+DataPropertyDomain(attack:has_attribution_confidence attack:Threat_Actor_Profiling)
+DataPropertyRange(attack:has_attribution_confidence xsd:decimal)
+
+# Data Property: attack:has_capec_identifier (attack:has_capec_identifier)
+
+DataPropertyDomain(attack:has_capec_identifier attack:CAPEC:Attack_Pattern)
+DataPropertyRange(attack:has_capec_identifier xsd:string)
+
+# Data Property: attack:has_confidence (attack:has_confidence)
+
+DataPropertyDomain(attack:has_confidence attack:Indicators_Of_Compromise)
+DataPropertyRange(attack:has_confidence xsd:decimal)
+
+# Data Property: attack:has_cpe_identifier (attack:has_cpe_identifier)
+
+DataPropertyDomain(attack:has_cpe_identifier attack:CPE_Platform)
+DataPropertyRange(attack:has_cpe_identifier xsd:string)
+
+# Data Property: attack:has_criticality_weight (attack:has_criticality_weight)
+
+DataPropertyDomain(attack:has_criticality_weight attack:Asset_Criticality_Level)
+DataPropertyRange(attack:has_criticality_weight xsd:decimal)
+
+# Data Property: attack:has_cve_identifier (attack:has_cve_identifier)
+
+DataPropertyDomain(attack:has_cve_identifier attack:CVE_Vulnerabilities)
+DataPropertyRange(attack:has_cve_identifier xsd:string)
+
+# Data Property: attack:has_cvss_base_score (attack:has_cvss_base_score)
+
+DataPropertyDomain(attack:has_cvss_base_score attack:Risk_Assessment)
+DataPropertyRange(attack:has_cvss_base_score xsd:decimal)
+
+# Data Property: attack:has_cvss_vector (attack:has_cvss_vector)
+
+DataPropertyDomain(attack:has_cvss_vector attack:Risk_Assessment)
+DataPropertyRange(attack:has_cvss_vector xsd:string)
+
+# Data Property: attack:has_cwe_identifier (attack:has_cwe_identifier)
+
+DataPropertyDomain(attack:has_cwe_identifier attack:CWE_Weakness)
+DataPropertyRange(attack:has_cwe_identifier xsd:string)
+
+# Data Property: attack:has_end_time (attack:has_end_time)
+
+DataPropertyDomain(attack:has_end_time attack:Temporal_Execution)
+DataPropertyRange(attack:has_end_time xsd:dateTime)
+
+# Data Property: attack:has_epss_score (attack:has_epss_score)
+
+DataPropertyDomain(attack:has_epss_score attack:Risk_Assessment)
+DataPropertyRange(attack:has_epss_score xsd:decimal)
+
+# Data Property: attack:has_execution_risk_score (attack:has_execution_risk_score)
+
+DataPropertyDomain(attack:has_execution_risk_score <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+DataPropertyRange(attack:has_execution_risk_score xsd:decimal)
+
+# Data Property: attack:has_impact_weight (attack:has_impact_weight)
+
+DataPropertyDomain(attack:has_impact_weight attack:Threat_Impact)
+DataPropertyRange(attack:has_impact_weight xsd:decimal)
+
+# Data Property: attack:has_indicator_pattern (attack:has_indicator_pattern)
+
+DataPropertyDomain(attack:has_indicator_pattern attack:Indicators_Of_Compromise)
+DataPropertyRange(attack:has_indicator_pattern xsd:string)
+
+# Data Property: attack:has_insider_risk_score (attack:has_insider_risk_score)
+
+DataPropertyDomain(attack:has_insider_risk_score attack:Insider_Threat)
+DataPropertyRange(attack:has_insider_risk_score xsd:decimal)
+
+# Data Property: attack:has_effectiveness_score (attack:has_effectiveness_score)
+
+DataPropertyDomain(attack:has_effectiveness_score attack:D3FEND_Countermeasure)
+DataPropertyRange(attack:has_effectiveness_score xsd:decimal)
+
+# Data Property: attack:has_nvd_entry (attack:has_nvd_entry)
+
+DataPropertyDomain(attack:has_nvd_entry attack:CVE_Vulnerabilities)
+DataPropertyRange(attack:has_nvd_entry xsd:anyURI)
+
+# Data Property: attack:has_published_date (attack:has_published_date)
+
+DataPropertyDomain(attack:has_published_date attack:CVE_Vulnerabilities)
+DataPropertyRange(attack:has_published_date xsd:dateTime)
+
+# Data Property: attack:has_start_time (attack:has_start_time)
+
+DataPropertyDomain(attack:has_start_time attack:Temporal_Execution)
+DataPropertyRange(attack:has_start_time xsd:dateTime)
+
+# Data Property: attack:has_sub_technique_id (attack:has_sub_technique_id)
+
+DataPropertyDomain(attack:has_sub_technique_id <https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique>)
+DataPropertyRange(attack:has_sub_technique_id xsd:string)
+
+# Data Property: attack:has_tactic_id (attack:has_tactic_id)
+
+DataPropertyDomain(attack:has_tactic_id <https://attack.mitre.org/MITRE_ATT&CK:Tactics>)
+DataPropertyRange(attack:has_tactic_id xsd:string)
+
+# Data Property: attack:has_technique_id (attack:has_technique_id)
+
+DataPropertyDomain(attack:has_technique_id <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+DataPropertyRange(attack:has_technique_id xsd:string)
+
+# Data Property: attack:is_known_exploited (attack:is_known_exploited)
+
+DataPropertyDomain(attack:is_known_exploited attack:Risk_Assessment)
+DataPropertyRange(attack:is_known_exploited xsd:boolean)
+
+# Data Property: attack:last_observed (attack:last_observed)
+
+DataPropertyDomain(attack:last_observed attack:Threat_Actor_Profiling)
+DataPropertyRange(attack:last_observed xsd:dateTime)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: attack:D3FEND_Sub_Countermeasure (attack:D3FEND_Sub_Countermeasure)
+
+SubClassOf(attack:D3FEND_Sub_Countermeasure attack:D3FEND_Countermeasure)
+
+# Class: attack:Insider_Threat (attack:Insider_Threat)
+
+DisjointClasses(attack:Insider_Threat attack:Threat_Actor_Profiling)
+
+# Class: MITRE_ATT&CK:Sub-Technique
+
+SubClassOf(<https://attack.mitre.org/MITRE_ATT&CK:Sub-Technique> <https://attack.mitre.org/MITRE_ATT&CK:Offensive_Techniques>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: attack:Inactive_VPN_Account_Access (attack:Inactive_VPN_Account_Access)
+
+ClassAssertion(attack:Attack_Vector attack:Inactive_VPN_Account_Access)
+
+# Individual: attack:Phishing_Resistant_MFA (attack:Phishing_Resistant_MFA)
+
+ObjectPropertyAssertion(attack:addresses_human_factor attack:Phishing_Resistant_MFA attack:Helpdesk_Agent_Verification_Gap)
+
+
+SubObjectPropertyOf(attack:exhibits_weakness attack:transitively_exhibits)
+SubObjectPropertyOf(ObjectPropertyChain(attack:exhibits_weakness attack:is_child_of_weakness) attack:transitively_exhibits)
+)
